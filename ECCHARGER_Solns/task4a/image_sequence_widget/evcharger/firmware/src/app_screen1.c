@@ -23,6 +23,9 @@ static leChar p_legatoTimeBuff[MAX_TIME_STRING_LEN] = {0};
 //C character buffer
 static char p_timecharbuff[MAX_TIME_STRING_LEN];
 
+void Screen1_OnShow(void)
+{
+}
 
 void UpdateTime(void)
 {
