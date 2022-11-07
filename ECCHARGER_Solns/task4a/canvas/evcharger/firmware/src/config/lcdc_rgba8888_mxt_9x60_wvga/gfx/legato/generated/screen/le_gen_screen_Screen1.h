@@ -39,6 +39,7 @@ extern leLabelWidget* Screen1_LabelWidget_13;
 extern leLabelWidget* Screen1_rtc_label;
 extern leButtonWidget* Screen1_ButtonWidget_plus;
 extern leButtonWidget* Screen1_ButtonWidget_minus;
+extern leWidget* Screen1_PanelWidget_0;
 extern leImageWidget* Screen1_ImageWidget_3;
 
 // screen lifecycle functions

@@ -31,6 +31,7 @@ leLabelWidget* Screen1_LabelWidget_13;
 leLabelWidget* Screen1_rtc_label;
 leButtonWidget* Screen1_ButtonWidget_plus;
 leButtonWidget* Screen1_ButtonWidget_minus;
+leWidget* Screen1_PanelWidget_0;
 leImageWidget* Screen1_ImageWidget_3;
 
 static leBool initialized = LE_FALSE;
@@ -267,6 +268,11 @@ leResult screenShow_Screen1(void)
     root2->flags |= LE_WIDGET_IGNOREEVENTS;
     root2->flags |= LE_WIDGET_IGNOREPICK;
 
+    Screen1_PanelWidget_0 = leWidget_New();
+    Screen1_PanelWidget_0->fn->setPosition(Screen1_PanelWidget_0, 58, 48);
+    Screen1_PanelWidget_0->fn->setSize(Screen1_PanelWidget_0, 178, 258);
+    root2->fn->addChild(root2, (leWidget*)Screen1_PanelWidget_0);
+
     Screen1_ImageWidget_3 = leImageWidget_New();
     Screen1_ImageWidget_3->fn->setPosition(Screen1_ImageWidget_3, 58, 48);
     Screen1_ImageWidget_3->fn->setSize(Screen1_ImageWidget_3, 178, 258);
@@ -333,6 +339,7 @@ void screenHide_Screen1(void)
     leWidget_Delete(root2);
     root2 = NULL;
 
+    Screen1_PanelWidget_0 = NULL;
     Screen1_ImageWidget_3 = NULL;
 
 

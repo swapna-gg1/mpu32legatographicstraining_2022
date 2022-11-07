@@ -7141,7 +7141,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_canvas" name="Canvas3FrameBufferAlloc"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;Canvas3FrameBufferAlloc&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Auto&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
 </value>
@@ -10892,7 +10894,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\gfx\legato\generated\screen\le_gen_screen_Screen1.c</file>
-         <hash>89219c5402a158cc103f50288c64a155c2d9e9efc05cc99373caa8312795464e</hash>
+         <hash>3a1e9ff519c303ab89f8253038a63dc97f80f86f882835cf7131e182358c5a0d</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\gfx\legato\image\raw\legato_imagedecoder_raw_read_stream_index.c</file>
@@ -10900,7 +10902,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\gfx\legato\generated\screen\le_gen_screen_Screen1.h</file>
-         <hash>d37c401bf020fea5c06b577dcd97e9097e4aa4a5923d3cd1d9c2167e51a1a532</hash>
+         <hash>e920012f18d3b17cd48be55947798657d48ac9690164230d0330fdd0237e96f5</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\instance\emac0.h</file>
@@ -11428,7 +11430,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\gfx\canvas\gfx_canvas.c</file>
-         <hash>d80c1134d00ec97bdea72e8383617139163fd57b2c7334d984ab7f21f9567c8d</hash>
+         <hash>3c94c6fe8dd1cdf2a850fb3bd3e62c82ecf4077a58a1d866583a2311cda4eda6</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\gfx\legato\image\raw\legato_imagedecoder_raw_read_stream_color.c</file>
@@ -12292,7 +12294,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\definitions.h</file>
-         <hash>fbe33b7e112f68c66748264d6d9ea85bbab5e93976806a5ffbd6ba0ba7767eb9</hash>
+         <hash>608c7f4404fa1eb609cfba0e036cb1c6c836ff6ed84e8964f154590c3194cead</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba8888_mxt_9x60_wvga\system\int\sys_int.h</file>

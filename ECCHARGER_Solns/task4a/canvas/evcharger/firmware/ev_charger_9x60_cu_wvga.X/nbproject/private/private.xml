@@ -5,6 +5,17 @@
         <group>
             <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/legato/widget/legato_widget.c</file>
             <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/legato/core/legato_state.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/app.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/legato/image/raw/legato_imagedecoder_raw_blend.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/app_screen1.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/app_screen0.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/app.h</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/legato/common/legato_pixelbuffer.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/canvas/gfx_canvas.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/driver/controller/lcdc/drv_gfx_lcdc.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/fault_handlers.c</file>
+            <file>file:/C:/Users/c40450/HarmonyProjects/training/evcharger/firmware/src/config/lcdc_rgba8888_mxt_9x60_wvga/gfx/canvas/gfx_canvas_api.c</file>
         </group>
     </open-files>
 </project-private>
