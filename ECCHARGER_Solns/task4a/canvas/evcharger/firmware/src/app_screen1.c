@@ -4,14 +4,11 @@
 #include "gfx/legato/generated/screen/le_gen_screen_Screen0.h"
 #include "config/lcdc_rgba8888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.h"
 #include "peripheral/tc/plib_tc0.h"
-#include "app.h"
 #include "gfx/canvas/gfx_canvas_api.h"
+#include "app.h"
 
 #define MAX_TIME_STRING_LEN 18    
 
-
-static uint32_t prev_tick, tick = 0;
-static uint8_t anim_cnt=0;
 // Structure to store RTC data
 struct tm currentTime;
 
@@ -26,8 +23,9 @@ static leChar p_legatoTimeBuff[MAX_TIME_STRING_LEN] = {0};
 
 //C character buffer
 static char p_timecharbuff[MAX_TIME_STRING_LEN];
-
-leImage * imgAnim[14];
+leImage  imgAnim[14];
+static uint8_t anim_cnt=0;
+static uint32_t prev_tick, tick = 0;
 
 void TC0_CH2_TimerInterruptHandler(TC_TIMER_STATUS status, uintptr_t context)
 {
@@ -39,40 +37,33 @@ void Screen1_OnShow(void)
     TC0_CH2_TimerStart();
     gfxcSetLayer(SCREEN1_CABLE_ANIMATE_ID, LAYER_2_ID);
     gfxcSetWindowPosition(SCREEN1_CABLE_ANIMATE_ID, 58, 48);
-    gfxcSetWindowSize(SCREEN1_CABLE_ANIMATE_ID, 178, 258);
-    //gfxcSetWindowPosition(SCREEN1_CABLE_ANIMATE_ID, 0, 0);
-    //gfxcSetWindowSize(SCREEN1_CABLE_ANIMATE_ID, 800, 480);
-    
-    
+    gfxcSetWindowSize(SCREEN1_CABLE_ANIMATE_ID, 178, 258); 
     gfxcShowCanvas(BASE_LAYER_CANVAS_ID);  
     gfxcCanvasUpdate(BASE_LAYER_CANVAS_ID); 
     gfxcShowCanvas(LAYER_1_CANVAS_ID);  
     gfxcCanvasUpdate(LAYER_1_CANVAS_ID); 
-    //gfxcShowCanvas(LAYER_2_CANVAS_ID);  
-    //gfxcCanvasUpdate(LAYER_2_CANVAS_ID); 
-    
-    
     gfxcShowCanvas(SCREEN1_CABLE_ANIMATE_ID);  
     gfxcCanvasUpdate(SCREEN1_CABLE_ANIMATE_ID); 
 }
 
 void init_anim_images(void)
 {
-    imgAnim[0]= &background0;
-    imgAnim[1]= &background1;
-    imgAnim[2]= &background2;
-    imgAnim[3]= &background3;
-    imgAnim[4]= &background4;
-    imgAnim[5]= &background5;
-    imgAnim[6]= &background6;
-    imgAnim[7]= &background7;
-    imgAnim[8]= &background8;
-    imgAnim[9]= &background9;
-    imgAnim[10]= &background10;
-    imgAnim[11]= &background11;
-    imgAnim[12]= &background12;
-    imgAnim[13]= &background13;
+    imgAnim[0]= background0;
+    imgAnim[1]= background1;
+    imgAnim[2]= background2;
+    imgAnim[3]= background3;
+    imgAnim[4]= background4;
+    imgAnim[5]= background5;
+    imgAnim[6]= background6;
+    imgAnim[7]= background7;
+    imgAnim[8]= background8;
+    imgAnim[9]= background9;
+    imgAnim[10]=background10;
+    imgAnim[11]=background11;
+    imgAnim[12]=background12;
+    imgAnim[13]=background13;
 }
+
 
 void UpdateTime(void)
 {
@@ -97,11 +88,7 @@ void init_Screen1(void)
     RTC_TimeSet( &currentTime );
     init_anim_images();
     TC0_CH2_TimerCallbackRegister(TC0_CH2_TimerInterruptHandler, (uintptr_t)NULL);
-    
-    //gfxcSetLayer(ANIMATE_CABLE_CANVAS_ID, ANIMATE_CABLE_LAYER_ID);
-    //gfxcSetWindowPosition(ANIMATE_CABLE_CANVAS_ID, 58, 48);
-    //gfxcSetWindowSize(ANIMATE_CABLE_CANVAS_ID, 178, 258);
-    
+
 }
 
 void UpdateTime_Label (void)
@@ -119,17 +106,16 @@ void UpdateTime_Label (void)
     }
 }
 
-void Update_ChargeCable_anime(void)
+void UpdateChargeAnime_Canvas(void)
 {
     if (tick != prev_tick)
     {
         prev_tick = tick;
-//        Screen1_ImageSequenceWidget_0->fn->showNextImage(Screen1_ImageSequenceWidget_0);
         gfxcSetPixelBuffer(SCREEN1_CABLE_ANIMATE_ID,
                        178,
                        258,
                        GFX_COLOR_MODE_RGBA_8888,
-                       (void *) imgAnim[++anim_cnt]->buffer.pixels);
+                       (void *) imgAnim[++anim_cnt].buffer.pixels);
         if(anim_cnt >=13)
         anim_cnt =0;
 
@@ -140,12 +126,12 @@ void Update_ChargeCable_anime(void)
         gfxcCanvasUpdate(SCREEN1_CABLE_ANIMATE_ID);
     
     }
+    
 }
 
 void Update_Screen1(void)
 {
     UpdateTime_Label();
-    Update_ChargeCable_anime();
+    UpdateChargeAnime_Canvas();
     //Screen1_ImageSequenceWidget_0->fn->showNextImage(Screen1_ImageSequenceWidget_0);
-          
 }

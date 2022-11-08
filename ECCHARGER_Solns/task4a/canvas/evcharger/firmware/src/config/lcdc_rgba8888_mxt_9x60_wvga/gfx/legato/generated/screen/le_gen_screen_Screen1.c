@@ -3,18 +3,12 @@
 // screen member widget declarations
 static leWidget* root0;
 static leWidget* root1;
-static leWidget* root2;
 
 leWidget* Screen1_Panel_0;
 leImageWidget* Screen1_ImageWidget_1;
 leImageWidget* Screen1_ImageWidget_0;
 leImageWidget* Screen1_ImageWidget_2;
 leLabelWidget* Screen1_LabelWidget_0;
-leRectangleWidget* Screen1_RectangleWidget_0;
-leRectangleWidget* Screen1_RectangleWidget_1;
-leRectangleWidget* Screen1_RectangleWidget_2;
-leRectangleWidget* Screen1_RectangleWidget_3;
-leRectangleWidget* Screen1_RectangleWidget_4;
 leLabelWidget* Screen1_LabelWidget_1;
 leLabelWidget* Screen1_LabelWidget_2;
 leLabelWidget* Screen1_LabelWidget_3;
@@ -28,11 +22,14 @@ leLabelWidget* Screen1_LabelWidget_10;
 leLabelWidget* Screen1_LabelWidget_11;
 leLabelWidget* Screen1_LabelWidget_12;
 leLabelWidget* Screen1_LabelWidget_13;
-leLabelWidget* Screen1_rtc_label;
+leRectangleWidget* Screen1_RectangleWidget_0;
+leRectangleWidget* Screen1_RectangleWidget_1;
+leRectangleWidget* Screen1_RectangleWidget_2;
+leRectangleWidget* Screen1_RectangleWidget_3;
+leRectangleWidget* Screen1_RectangleWidget_4;
 leButtonWidget* Screen1_ButtonWidget_plus;
 leButtonWidget* Screen1_ButtonWidget_minus;
-leWidget* Screen1_PanelWidget_0;
-leImageWidget* Screen1_ImageWidget_3;
+leLabelWidget* Screen1_rtc_label;
 
 static leBool initialized = LE_FALSE;
 static leBool showing = LE_FALSE;
@@ -60,6 +57,27 @@ leResult screenShow_Screen1(void)
     root0->flags |= LE_WIDGET_IGNOREEVENTS;
     root0->flags |= LE_WIDGET_IGNOREPICK;
 
+    Screen1_Panel_0 = leWidget_New();
+    Screen1_Panel_0->fn->setPosition(Screen1_Panel_0, 0, 0);
+    Screen1_Panel_0->fn->setSize(Screen1_Panel_0, 800, 480);
+    Screen1_Panel_0->fn->setScheme(Screen1_Panel_0, &BlackScheme);
+    root0->fn->addChild(root0, (leWidget*)Screen1_Panel_0);
+
+    Screen1_ImageWidget_1 = leImageWidget_New();
+    Screen1_ImageWidget_1->fn->setPosition(Screen1_ImageWidget_1, 0, 0);
+    Screen1_ImageWidget_1->fn->setSize(Screen1_ImageWidget_1, 800, 480);
+    Screen1_ImageWidget_1->fn->setScheme(Screen1_ImageWidget_1, &BlackScheme);
+    Screen1_ImageWidget_1->fn->setBorderType(Screen1_ImageWidget_1, LE_WIDGET_BORDER_NONE);
+    Screen1_ImageWidget_1->fn->setImage(Screen1_ImageWidget_1, (leImage*)&Image1);
+    root0->fn->addChild(root0, (leWidget*)Screen1_ImageWidget_1);
+
+    Screen1_ImageWidget_0 = leImageWidget_New();
+    Screen1_ImageWidget_0->fn->setPosition(Screen1_ImageWidget_0, 10, 10);
+    Screen1_ImageWidget_0->fn->setSize(Screen1_ImageWidget_0, 144, 39);
+    Screen1_ImageWidget_0->fn->setBorderType(Screen1_ImageWidget_0, LE_WIDGET_BORDER_NONE);
+    Screen1_ImageWidget_0->fn->setImage(Screen1_ImageWidget_0, (leImage*)&MicrochipLogo);
+    root0->fn->addChild(root0, (leWidget*)Screen1_ImageWidget_0);
+
     leAddRootWidget(root0, 0);
     leSetLayerColorMode(0, LE_COLOR_MODE_RGBA_8888);
 
@@ -70,27 +88,6 @@ leResult screenShow_Screen1(void)
     root1->fn->setMargins(root1, 0, 0, 0, 0);
     root1->flags |= LE_WIDGET_IGNOREEVENTS;
     root1->flags |= LE_WIDGET_IGNOREPICK;
-
-    Screen1_Panel_0 = leWidget_New();
-    Screen1_Panel_0->fn->setPosition(Screen1_Panel_0, 0, 0);
-    Screen1_Panel_0->fn->setSize(Screen1_Panel_0, 800, 480);
-    Screen1_Panel_0->fn->setScheme(Screen1_Panel_0, &BlackScheme);
-    root1->fn->addChild(root1, (leWidget*)Screen1_Panel_0);
-
-    Screen1_ImageWidget_1 = leImageWidget_New();
-    Screen1_ImageWidget_1->fn->setPosition(Screen1_ImageWidget_1, 0, 0);
-    Screen1_ImageWidget_1->fn->setSize(Screen1_ImageWidget_1, 800, 480);
-    Screen1_ImageWidget_1->fn->setScheme(Screen1_ImageWidget_1, &BlackScheme);
-    Screen1_ImageWidget_1->fn->setBorderType(Screen1_ImageWidget_1, LE_WIDGET_BORDER_NONE);
-    Screen1_ImageWidget_1->fn->setImage(Screen1_ImageWidget_1, (leImage*)&Image1);
-    root1->fn->addChild(root1, (leWidget*)Screen1_ImageWidget_1);
-
-    Screen1_ImageWidget_0 = leImageWidget_New();
-    Screen1_ImageWidget_0->fn->setPosition(Screen1_ImageWidget_0, 10, 10);
-    Screen1_ImageWidget_0->fn->setSize(Screen1_ImageWidget_0, 144, 39);
-    Screen1_ImageWidget_0->fn->setBorderType(Screen1_ImageWidget_0, LE_WIDGET_BORDER_NONE);
-    Screen1_ImageWidget_0->fn->setImage(Screen1_ImageWidget_0, (leImage*)&MicrochipLogo);
-    root1->fn->addChild(root1, (leWidget*)Screen1_ImageWidget_0);
 
     Screen1_ImageWidget_2 = leImageWidget_New();
     Screen1_ImageWidget_2->fn->setPosition(Screen1_ImageWidget_2, 558, 339);
@@ -105,41 +102,6 @@ leResult screenShow_Screen1(void)
     Screen1_LabelWidget_0->fn->setScheme(Screen1_LabelWidget_0, &WhiteScheme);
     Screen1_LabelWidget_0->fn->setString(Screen1_LabelWidget_0, (leString*)&string_evcharger);
     root1->fn->addChild(root1, (leWidget*)Screen1_LabelWidget_0);
-
-    Screen1_RectangleWidget_0 = leRectangleWidget_New();
-    Screen1_RectangleWidget_0->fn->setPosition(Screen1_RectangleWidget_0, 55, 328);
-    Screen1_RectangleWidget_0->fn->setSize(Screen1_RectangleWidget_0, 7, 100);
-    Screen1_RectangleWidget_0->fn->setBorderType(Screen1_RectangleWidget_0, LE_WIDGET_BORDER_NONE);
-    Screen1_RectangleWidget_0->fn->setThickness(Screen1_RectangleWidget_0, 2);
-    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_0);
-
-    Screen1_RectangleWidget_1 = leRectangleWidget_New();
-    Screen1_RectangleWidget_1->fn->setPosition(Screen1_RectangleWidget_1, 163, 328);
-    Screen1_RectangleWidget_1->fn->setSize(Screen1_RectangleWidget_1, 7, 100);
-    Screen1_RectangleWidget_1->fn->setBorderType(Screen1_RectangleWidget_1, LE_WIDGET_BORDER_NONE);
-    Screen1_RectangleWidget_1->fn->setThickness(Screen1_RectangleWidget_1, 2);
-    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_1);
-
-    Screen1_RectangleWidget_2 = leRectangleWidget_New();
-    Screen1_RectangleWidget_2->fn->setPosition(Screen1_RectangleWidget_2, 260, 328);
-    Screen1_RectangleWidget_2->fn->setSize(Screen1_RectangleWidget_2, 7, 100);
-    Screen1_RectangleWidget_2->fn->setBorderType(Screen1_RectangleWidget_2, LE_WIDGET_BORDER_NONE);
-    Screen1_RectangleWidget_2->fn->setThickness(Screen1_RectangleWidget_2, 2);
-    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_2);
-
-    Screen1_RectangleWidget_3 = leRectangleWidget_New();
-    Screen1_RectangleWidget_3->fn->setPosition(Screen1_RectangleWidget_3, 378, 328);
-    Screen1_RectangleWidget_3->fn->setSize(Screen1_RectangleWidget_3, 7, 100);
-    Screen1_RectangleWidget_3->fn->setBorderType(Screen1_RectangleWidget_3, LE_WIDGET_BORDER_NONE);
-    Screen1_RectangleWidget_3->fn->setThickness(Screen1_RectangleWidget_3, 2);
-    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_3);
-
-    Screen1_RectangleWidget_4 = leRectangleWidget_New();
-    Screen1_RectangleWidget_4->fn->setPosition(Screen1_RectangleWidget_4, 492, 328);
-    Screen1_RectangleWidget_4->fn->setSize(Screen1_RectangleWidget_4, 7, 100);
-    Screen1_RectangleWidget_4->fn->setBorderType(Screen1_RectangleWidget_4, LE_WIDGET_BORDER_NONE);
-    Screen1_RectangleWidget_4->fn->setThickness(Screen1_RectangleWidget_4, 2);
-    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_4);
 
     Screen1_LabelWidget_1 = leLabelWidget_New();
     Screen1_LabelWidget_1->fn->setPosition(Screen1_LabelWidget_1, 68, 328);
@@ -232,12 +194,40 @@ leResult screenShow_Screen1(void)
     Screen1_LabelWidget_13->fn->setString(Screen1_LabelWidget_13, (leString*)&string_remaining_charge);
     root1->fn->addChild(root1, (leWidget*)Screen1_LabelWidget_13);
 
-    Screen1_rtc_label = leLabelWidget_New();
-    Screen1_rtc_label->fn->setPosition(Screen1_rtc_label, 346, 20);
-    Screen1_rtc_label->fn->setSize(Screen1_rtc_label, 165, 25);
-    Screen1_rtc_label->fn->setScheme(Screen1_rtc_label, &WhiteScheme);
-    Screen1_rtc_label->fn->setString(Screen1_rtc_label, (leString*)&string_rtc);
-    root1->fn->addChild(root1, (leWidget*)Screen1_rtc_label);
+    Screen1_RectangleWidget_0 = leRectangleWidget_New();
+    Screen1_RectangleWidget_0->fn->setPosition(Screen1_RectangleWidget_0, 55, 328);
+    Screen1_RectangleWidget_0->fn->setSize(Screen1_RectangleWidget_0, 7, 100);
+    Screen1_RectangleWidget_0->fn->setBorderType(Screen1_RectangleWidget_0, LE_WIDGET_BORDER_NONE);
+    Screen1_RectangleWidget_0->fn->setThickness(Screen1_RectangleWidget_0, 2);
+    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_0);
+
+    Screen1_RectangleWidget_1 = leRectangleWidget_New();
+    Screen1_RectangleWidget_1->fn->setPosition(Screen1_RectangleWidget_1, 163, 328);
+    Screen1_RectangleWidget_1->fn->setSize(Screen1_RectangleWidget_1, 7, 100);
+    Screen1_RectangleWidget_1->fn->setBorderType(Screen1_RectangleWidget_1, LE_WIDGET_BORDER_NONE);
+    Screen1_RectangleWidget_1->fn->setThickness(Screen1_RectangleWidget_1, 2);
+    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_1);
+
+    Screen1_RectangleWidget_2 = leRectangleWidget_New();
+    Screen1_RectangleWidget_2->fn->setPosition(Screen1_RectangleWidget_2, 260, 328);
+    Screen1_RectangleWidget_2->fn->setSize(Screen1_RectangleWidget_2, 7, 100);
+    Screen1_RectangleWidget_2->fn->setBorderType(Screen1_RectangleWidget_2, LE_WIDGET_BORDER_NONE);
+    Screen1_RectangleWidget_2->fn->setThickness(Screen1_RectangleWidget_2, 2);
+    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_2);
+
+    Screen1_RectangleWidget_3 = leRectangleWidget_New();
+    Screen1_RectangleWidget_3->fn->setPosition(Screen1_RectangleWidget_3, 378, 328);
+    Screen1_RectangleWidget_3->fn->setSize(Screen1_RectangleWidget_3, 7, 100);
+    Screen1_RectangleWidget_3->fn->setBorderType(Screen1_RectangleWidget_3, LE_WIDGET_BORDER_NONE);
+    Screen1_RectangleWidget_3->fn->setThickness(Screen1_RectangleWidget_3, 2);
+    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_3);
+
+    Screen1_RectangleWidget_4 = leRectangleWidget_New();
+    Screen1_RectangleWidget_4->fn->setPosition(Screen1_RectangleWidget_4, 492, 328);
+    Screen1_RectangleWidget_4->fn->setSize(Screen1_RectangleWidget_4, 7, 100);
+    Screen1_RectangleWidget_4->fn->setBorderType(Screen1_RectangleWidget_4, LE_WIDGET_BORDER_NONE);
+    Screen1_RectangleWidget_4->fn->setThickness(Screen1_RectangleWidget_4, 2);
+    root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_4);
 
     Screen1_ButtonWidget_plus = leButtonWidget_New();
     Screen1_ButtonWidget_plus->fn->setPosition(Screen1_ButtonWidget_plus, 690, 312);
@@ -257,31 +247,15 @@ leResult screenShow_Screen1(void)
     Screen1_ButtonWidget_minus->fn->setReleasedImage(Screen1_ButtonWidget_minus, (leImage*)&minus);
     root1->fn->addChild(root1, (leWidget*)Screen1_ButtonWidget_minus);
 
+    Screen1_rtc_label = leLabelWidget_New();
+    Screen1_rtc_label->fn->setPosition(Screen1_rtc_label, 346, 20);
+    Screen1_rtc_label->fn->setSize(Screen1_rtc_label, 165, 25);
+    Screen1_rtc_label->fn->setScheme(Screen1_rtc_label, &WhiteScheme);
+    Screen1_rtc_label->fn->setString(Screen1_rtc_label, (leString*)&string_rtc);
+    root1->fn->addChild(root1, (leWidget*)Screen1_rtc_label);
+
     leAddRootWidget(root1, 1);
     leSetLayerColorMode(1, LE_COLOR_MODE_RGBA_8888);
-
-    // layer 2
-    root2 = leWidget_New();
-    root2->fn->setSize(root2, 800, 480);
-    root2->fn->setBackgroundType(root2, LE_WIDGET_BACKGROUND_NONE);
-    root2->fn->setMargins(root2, 0, 0, 0, 0);
-    root2->flags |= LE_WIDGET_IGNOREEVENTS;
-    root2->flags |= LE_WIDGET_IGNOREPICK;
-
-    Screen1_PanelWidget_0 = leWidget_New();
-    Screen1_PanelWidget_0->fn->setPosition(Screen1_PanelWidget_0, 58, 48);
-    Screen1_PanelWidget_0->fn->setSize(Screen1_PanelWidget_0, 178, 258);
-    root2->fn->addChild(root2, (leWidget*)Screen1_PanelWidget_0);
-
-    Screen1_ImageWidget_3 = leImageWidget_New();
-    Screen1_ImageWidget_3->fn->setPosition(Screen1_ImageWidget_3, 58, 48);
-    Screen1_ImageWidget_3->fn->setSize(Screen1_ImageWidget_3, 178, 258);
-    Screen1_ImageWidget_3->fn->setBorderType(Screen1_ImageWidget_3, LE_WIDGET_BORDER_NONE);
-    Screen1_ImageWidget_3->fn->setImage(Screen1_ImageWidget_3, (leImage*)&background0);
-    root2->fn->addChild(root2, (leWidget*)Screen1_ImageWidget_3);
-
-    leAddRootWidget(root2, 2);
-    leSetLayerColorMode(2, LE_COLOR_MODE_RGBA_8888);
 
     Screen1_OnShow(); // raise event
 
@@ -294,7 +268,6 @@ void screenUpdate_Screen1(void)
 {
     root0->fn->setSize(root0, root0->rect.width, root0->rect.height);
     root1->fn->setSize(root1, root1->rect.width, root1->rect.height);
-    root2->fn->setSize(root2, root2->rect.width, root2->rect.height);
 }
 
 void screenHide_Screen1(void)
@@ -304,20 +277,16 @@ void screenHide_Screen1(void)
     leWidget_Delete(root0);
     root0 = NULL;
 
+    Screen1_Panel_0 = NULL;
+    Screen1_ImageWidget_1 = NULL;
+    Screen1_ImageWidget_0 = NULL;
+
     leRemoveRootWidget(root1, 1);
     leWidget_Delete(root1);
     root1 = NULL;
 
-    Screen1_Panel_0 = NULL;
-    Screen1_ImageWidget_1 = NULL;
-    Screen1_ImageWidget_0 = NULL;
     Screen1_ImageWidget_2 = NULL;
     Screen1_LabelWidget_0 = NULL;
-    Screen1_RectangleWidget_0 = NULL;
-    Screen1_RectangleWidget_1 = NULL;
-    Screen1_RectangleWidget_2 = NULL;
-    Screen1_RectangleWidget_3 = NULL;
-    Screen1_RectangleWidget_4 = NULL;
     Screen1_LabelWidget_1 = NULL;
     Screen1_LabelWidget_2 = NULL;
     Screen1_LabelWidget_3 = NULL;
@@ -331,16 +300,14 @@ void screenHide_Screen1(void)
     Screen1_LabelWidget_11 = NULL;
     Screen1_LabelWidget_12 = NULL;
     Screen1_LabelWidget_13 = NULL;
-    Screen1_rtc_label = NULL;
+    Screen1_RectangleWidget_0 = NULL;
+    Screen1_RectangleWidget_1 = NULL;
+    Screen1_RectangleWidget_2 = NULL;
+    Screen1_RectangleWidget_3 = NULL;
+    Screen1_RectangleWidget_4 = NULL;
     Screen1_ButtonWidget_plus = NULL;
     Screen1_ButtonWidget_minus = NULL;
-
-    leRemoveRootWidget(root2, 2);
-    leWidget_Delete(root2);
-    root2 = NULL;
-
-    Screen1_PanelWidget_0 = NULL;
-    Screen1_ImageWidget_3 = NULL;
+    Screen1_rtc_label = NULL;
 
 
     showing = LE_FALSE;
@@ -368,10 +335,6 @@ leWidget* screenGetRoot_Screen1(uint32_t lyrIdx)
         case 1:
         {
             return root1;
-        }
-        case 2:
-        {
-            return root2;
         }
         default:
         {

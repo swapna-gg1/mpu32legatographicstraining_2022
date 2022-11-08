@@ -18,11 +18,6 @@ extern leImageWidget* Screen1_ImageWidget_1;
 extern leImageWidget* Screen1_ImageWidget_0;
 extern leImageWidget* Screen1_ImageWidget_2;
 extern leLabelWidget* Screen1_LabelWidget_0;
-extern leRectangleWidget* Screen1_RectangleWidget_0;
-extern leRectangleWidget* Screen1_RectangleWidget_1;
-extern leRectangleWidget* Screen1_RectangleWidget_2;
-extern leRectangleWidget* Screen1_RectangleWidget_3;
-extern leRectangleWidget* Screen1_RectangleWidget_4;
 extern leLabelWidget* Screen1_LabelWidget_1;
 extern leLabelWidget* Screen1_LabelWidget_2;
 extern leLabelWidget* Screen1_LabelWidget_3;
@@ -36,11 +31,14 @@ extern leLabelWidget* Screen1_LabelWidget_10;
 extern leLabelWidget* Screen1_LabelWidget_11;
 extern leLabelWidget* Screen1_LabelWidget_12;
 extern leLabelWidget* Screen1_LabelWidget_13;
-extern leLabelWidget* Screen1_rtc_label;
+extern leRectangleWidget* Screen1_RectangleWidget_0;
+extern leRectangleWidget* Screen1_RectangleWidget_1;
+extern leRectangleWidget* Screen1_RectangleWidget_2;
+extern leRectangleWidget* Screen1_RectangleWidget_3;
+extern leRectangleWidget* Screen1_RectangleWidget_4;
 extern leButtonWidget* Screen1_ButtonWidget_plus;
 extern leButtonWidget* Screen1_ButtonWidget_minus;
-extern leWidget* Screen1_PanelWidget_0;
-extern leImageWidget* Screen1_ImageWidget_3;
+extern leLabelWidget* Screen1_rtc_label;
 
 // screen lifecycle functions
 // DO NOT CALL THESE DIRECTLY
