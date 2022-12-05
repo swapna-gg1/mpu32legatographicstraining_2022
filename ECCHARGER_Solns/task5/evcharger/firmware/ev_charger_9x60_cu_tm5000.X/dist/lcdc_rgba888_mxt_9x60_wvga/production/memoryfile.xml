@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/lcdc_rgba888_mxt_9x60_wvga/production/ev_charger_9x60_cu_tm5000.X.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>116391936</length>
+      <used>7535032</used>
+      <free>108856904</free>
+    </memory>
+  </executable>
+</project>

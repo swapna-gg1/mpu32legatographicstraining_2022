@@ -162,10 +162,10 @@ build/lcdc_rgba888_mxt_9x60_wvga/debug/_ext/1360937237/app_screen0.o: \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/pio/plib_pio.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/aic/plib_aic.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/gfx/driver/controller/lcdc/drv_gfx_lcdc.h \
- ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.h \
- ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc_common.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/flexcom/twi/master/plib_flexcom6_twi_master.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/flexcom/twi/master/plib_flexcom_twi_master_common.h \
+ ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.h \
+ ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc_common.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/tc/plib_tc0.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/tc/plib_tc_common.h \
  ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/lcdc/plib_lcdc.h \
@@ -527,13 +527,13 @@ build/lcdc_rgba888_mxt_9x60_wvga/debug/_ext/1360937237/app_screen0.o: \
 
 ../src/config/lcdc_rgba888_mxt_9x60_wvga/gfx/driver/controller/lcdc/drv_gfx_lcdc.h:
 
-../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.h:
-
-../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc_common.h:
-
 ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/flexcom/twi/master/plib_flexcom6_twi_master.h:
 
 ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/flexcom/twi/master/plib_flexcom_twi_master_common.h:
+
+../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.h:
+
+../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc_common.h:
 
 ../src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/tc/plib_tc0.h:
 
