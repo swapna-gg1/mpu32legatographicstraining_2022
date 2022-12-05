@@ -137,6 +137,8 @@ typedef struct
 
 void APP_Initialize ( void );
 
+void init_RTC_Label_Screen1(void);
+void UpdateTime_Label (void);
 
 /*******************************************************************************
   Function:
@@ -169,10 +171,6 @@ void APP_Initialize ( void );
  */
 
 void APP_Tasks( void );
-
-
-void init_RTC_Label_Screen1(void);
-void UpdateTime_Label(void);
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

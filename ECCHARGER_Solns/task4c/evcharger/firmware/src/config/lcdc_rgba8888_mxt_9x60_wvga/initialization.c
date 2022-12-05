@@ -284,9 +284,9 @@ void SYS_Initialize ( void* data )
     TC1_CH0_TimerInitialize(); 
      
     
-	RTC_Initialize();
-
     FLEXCOM6_TWI_Initialize();
+
+	RTC_Initialize();
 
  
     TC0_CH0_TimerInitialize(); 

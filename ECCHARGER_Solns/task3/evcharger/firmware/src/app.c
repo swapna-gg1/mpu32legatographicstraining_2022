@@ -28,13 +28,12 @@
 // *****************************************************************************
 
 #include "app.h"
-#include "gfx/legato/generated/le_gen_init.h"
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-
 
 // *****************************************************************************
 /* Application Data
@@ -71,6 +70,11 @@ APP_DATA appData;
 
 /* TODO:  Add any necessary local functions.
 */
+#include "definitions.h"
+void event_Screen0_ButtonWidget_0_OnReleased(leButtonWidget* btn)
+{
+    legato_showScreen(screenID_Screen1);  
+}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -117,6 +121,7 @@ void APP_Tasks ( void )
         case APP_STATE_INIT:
         {
             bool appInitialized = true;
+
             init_RTC_Label_Screen1();
             if (appInitialized)
             {
@@ -130,7 +135,7 @@ void APP_Tasks ( void )
         {
             if(legato_getCurrentScreen()==screenID_Screen1)
                 UpdateTime_Label();
-           
+
             break;
         }
 
