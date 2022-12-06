@@ -86,16 +86,6 @@ leResult screenShow_Screen0(void)
     Screen0_LabelWidget2->fn->setString(Screen0_LabelWidget2, (leString*)&string_Notice);
     root1->fn->addChild(root1, (leWidget*)Screen0_LabelWidget2);
 
-    Screen0_ButtonWidget1 = leButtonWidget_New();
-    Screen0_ButtonWidget1->fn->setPosition(Screen0_ButtonWidget1, 717, 7);
-    Screen0_ButtonWidget1->fn->setSize(Screen0_ButtonWidget1, 75, 75);
-    Screen0_ButtonWidget1->fn->setBackgroundType(Screen0_ButtonWidget1, LE_WIDGET_BACKGROUND_NONE);
-    Screen0_ButtonWidget1->fn->setBorderType(Screen0_ButtonWidget1, LE_WIDGET_BORDER_NONE);
-    Screen0_ButtonWidget1->fn->setPressedImage(Screen0_ButtonWidget1, (leImage*)&button_on);
-    Screen0_ButtonWidget1->fn->setReleasedImage(Screen0_ButtonWidget1, (leImage*)&button_off);
-    Screen0_ButtonWidget1->fn->setReleasedEventCallback(Screen0_ButtonWidget1, event_Screen0_ButtonWidget1_OnReleased);
-    root1->fn->addChild(root1, (leWidget*)Screen0_ButtonWidget1);
-
     leAddRootWidget(root1, 1);
     leSetLayerColorMode(1, LE_COLOR_MODE_RGBA_8888);
 
@@ -106,6 +96,16 @@ leResult screenShow_Screen0(void)
     root2->fn->setMargins(root2, 0, 0, 0, 0);
     root2->flags |= LE_WIDGET_IGNOREEVENTS;
     root2->flags |= LE_WIDGET_IGNOREPICK;
+
+    Screen0_ButtonWidget1 = leButtonWidget_New();
+    Screen0_ButtonWidget1->fn->setPosition(Screen0_ButtonWidget1, 717, 7);
+    Screen0_ButtonWidget1->fn->setSize(Screen0_ButtonWidget1, 75, 75);
+    Screen0_ButtonWidget1->fn->setBackgroundType(Screen0_ButtonWidget1, LE_WIDGET_BACKGROUND_NONE);
+    Screen0_ButtonWidget1->fn->setBorderType(Screen0_ButtonWidget1, LE_WIDGET_BORDER_NONE);
+    Screen0_ButtonWidget1->fn->setPressedImage(Screen0_ButtonWidget1, (leImage*)&button_on);
+    Screen0_ButtonWidget1->fn->setReleasedImage(Screen0_ButtonWidget1, (leImage*)&button_off);
+    Screen0_ButtonWidget1->fn->setReleasedEventCallback(Screen0_ButtonWidget1, event_Screen0_ButtonWidget1_OnReleased);
+    root2->fn->addChild(root2, (leWidget*)Screen0_ButtonWidget1);
 
     leAddRootWidget(root2, 2);
     leSetLayerColorMode(2, LE_COLOR_MODE_RGBA_8888);
@@ -143,11 +143,12 @@ void screenHide_Screen0(void)
 
     Screen0_RectangleWidget_0 = NULL;
     Screen0_LabelWidget2 = NULL;
-    Screen0_ButtonWidget1 = NULL;
 
     leRemoveRootWidget(root2, 2);
     leWidget_Delete(root2);
     root2 = NULL;
+
+    Screen0_ButtonWidget1 = NULL;
 
 
     showing = LE_FALSE;
