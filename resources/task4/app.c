@@ -104,8 +104,12 @@ void APP_Initialize ( void )
     gfxcSetWindowPosition(LAYER_1_CANVAS_ID, 0, 0);
     gfxcSetWindowSize(LAYER_1_CANVAS_ID, 800, 480);
   
+    gfxcSetLayer(LAYER_2_CANVAS_ID, LAYER_2_ID);
+    gfxcSetWindowPosition(LAYER_2_CANVAS_ID, 0, 0);
+    gfxcSetWindowSize(LAYER_2_CANVAS_ID, 800, 480);
+    
     gfxcSetLayer(CABLE_ANIMATE_CANVAS_ID, LAYER_2_ID);
-    gfxcSetWindowPosition(CABLE_ANIMATE_CANVAS_ID, 58, 48);
+    gfxcSetWindowPosition(CABLE_ANIMATE_CANVAS_ID, 58, 112);
     gfxcSetWindowSize(CABLE_ANIMATE_CANVAS_ID, 178, 258);
 
     /* TODO: Initialize your application's state machine and other

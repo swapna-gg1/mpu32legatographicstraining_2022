@@ -44,8 +44,7 @@ void Screen1_OnShow(void)
     gfxcCanvasUpdate(LAYER_0_CANVAS_ID);
     gfxcShowCanvas(LAYER_1_CANVAS_ID);  
     gfxcCanvasUpdate(LAYER_1_CANVAS_ID);
-    gfxcShowCanvas(CABLE_ANIMATE_CANVAS_ID);  
-    gfxcCanvasUpdate(CABLE_ANIMATE_CANVAS_ID); 
+ 
 }
 
 void init_anim_images(void)

@@ -3396,8 +3396,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;438&quot; canvasWidth=&quot;787&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_9X60_Evaluation_Kit&quot; x=&quot;240&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;664&quot; y=&quot;16&quot;/&gt;
@@ -3405,7 +3404,7 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;dfp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;drv_i2c&quot; x=&quot;184&quot; y=&quot;329&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;flexcom6&quot; x=&quot;28&quot; y=&quot;326&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;gfx_canvas&quot; x=&quot;570&quot; y=&quot;320&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;gfx_canvas&quot; x=&quot;568&quot; y=&quot;321&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;gfx_disp_pdatm5000_800x480&quot; x=&quot;6&quot; y=&quot;223&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;gfx_hal_le&quot; x=&quot;310&quot; y=&quot;60&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;gfx_legato&quot; x=&quot;469&quot; y=&quot;119&quot;/&gt;
@@ -3419,6 +3418,7 @@
         &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;tc0&quot; x=&quot;411&quot; y=&quot;261&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;438&quot; canvasWidth=&quot;787&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -7064,7 +7064,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;Canvas2Height&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;258&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;480&quot;/&gt;
     &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
@@ -7084,7 +7084,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;Canvas2Width&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;178&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;800&quot;/&gt;
     &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
@@ -7103,7 +7103,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_canvas" name="Canvas3FrameBufferAlloc"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;Canvas3FrameBufferAlloc&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Auto&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
 </value>
@@ -7112,7 +7114,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_canvas" name="Canvas3Height"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;Canvas3Height&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;258&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
 </value>
@@ -7130,7 +7134,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_canvas" name="Canvas3Width"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;Canvas3Width&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;178&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
 </value>
@@ -7512,7 +7518,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_canvas" name="NumCanvasObjects"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_canvas&gt;
   &lt;gfx_canvas dnOrder=&quot;0&quot; id=&quot;NumCanvasObjects&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;4&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/gfx_canvas&gt;
 &lt;/gfx_canvas&gt;
 </value>
@@ -10726,7 +10734,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\gfx\legato\generated\screen\le_gen_screen_Screen0.c</file>
-         <hash>3ebcfdc053c3c63268937948e374291ddd65cf2ecee45ebf232262eb3ea945c5</hash>
+         <hash>7387769edad723171960fc3a647d2ee4c68b451c5688306b4d6ac6239ed23bac</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\gfx\legato\image\raw\legato_imagedecoder_raw.h</file>
@@ -11110,7 +11118,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\gfx\canvas\gfx_canvas.h</file>
-         <hash>2fc821109f8d60a215ad0b8b1248223f95ddd06fa792b36c69a2a2b6d35e116e</hash>
+         <hash>f4150c316ef2574d05423fa7f373adb7f059634b23eaba4262028537af57e61b</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAM9X60_DFP\component\pwm.h</file>
@@ -11134,7 +11142,7 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\gfx\canvas\gfx_canvas.c</file>
-         <hash>5019a89df477ae10d568cbb93e4c78c274c60e681535c1ffcdc797ff90e3ee5e</hash>
+         <hash>c03b7c197098c506f593f887f52edf2e1b240eb5d8ca5872d455671270056859</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\driver\i2c\src\drv_i2c_local.h</file>
@@ -11598,11 +11606,11 @@
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\definitions.h</file>
-         <hash>6579bd8984fee9a436375df2275ce707c7b468c33167ee2598111da688dbd7f3</hash>
+         <hash>45d89bb78eef58c5d8fdca5bf3845df4064c83bd28a3e0410cda9309dd7ff7f6</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\initialization.c</file>
-         <hash>e889074482cefa99f8024d2aa482d86fd33a603addd3252b8e17e95131ed0ade</hash>
+         <hash>96696cdb064202e238eec0aaf3cfeb8c1d4afb7407d6a7faa16216966937226b</hash>
       </entry>
       <entry>
          <file>..\src\config\lcdc_rgba888_mxt_9x60_wvga\gfx\legato\image\legato_image_utils.h</file>

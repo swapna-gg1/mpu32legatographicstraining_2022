@@ -43,7 +43,8 @@ extern "C" {
     
 #define LAYER_0_CANVAS_ID 0
 #define LAYER_1_CANVAS_ID 1
-#define CABLE_ANIMATE_CANVAS_ID 2
+#define LAYER_2_CANVAS_ID 2
+#define CABLE_ANIMATE_CANVAS_ID 3
 
  
 #define LAYER_0_ID 0

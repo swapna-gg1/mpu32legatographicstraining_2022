@@ -5,7 +5,7 @@
   <confs>
     <conf name="lcdc_rgba888_mxt_9x60_wvga" type="2">
       <platformToolSN>:=ThirdParty-DLL-SEGGER:=&lt;man>SEGGER:=&lt;prod>Microchip J-32:=&lt;sn>980100344:=&lt;drv>v:=&lt;xpt>u:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files\Microchip\xc32\v4.10\bin</languageToolchainDir>
+      <languageToolchainDir></languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
