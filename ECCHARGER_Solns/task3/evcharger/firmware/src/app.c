@@ -71,10 +71,6 @@ APP_DATA appData;
 /* TODO:  Add any necessary local functions.
 */
 #include "definitions.h"
-void event_Screen0_ButtonWidget_0_OnReleased(leButtonWidget* btn)
-{
-    legato_showScreen(screenID_Screen1);  
-}
 
 // *****************************************************************************
 // *****************************************************************************

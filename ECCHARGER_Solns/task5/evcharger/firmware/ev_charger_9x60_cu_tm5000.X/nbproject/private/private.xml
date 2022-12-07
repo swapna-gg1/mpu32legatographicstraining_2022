@@ -3,14 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/app.h</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/app_screen0.c</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/config/lcdc_rgba888_mxt_9x60_wvga/peripheral/rtc/plib_rtc.c</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/config/lcdc_rgba888_mxt_9x60_wvga/gfx/legato/core/legato_state.c</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/app.c</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/config/lcdc_rgba888_mxt_9x60_wvga/gfx/legato/widget/legato_widget.c</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/app_screen1.c</file>
-            <file>file:/C:/Users/c40450/HarmonyProjects/evcharger/firmware/src/config/lcdc_rgba888_mxt_9x60_wvga/gfx/driver/controller/lcdc/drv_gfx_lcdc.c</file>
+            <file>file:/C:/work/training/harmony_training/2022/ECCHARGER_Solns/task5/evcharger/firmware/src/app.c</file>
         </group>
     </open-files>
 </project-private>
