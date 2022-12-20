@@ -192,8 +192,8 @@ extern leRasterFont NotoSans_48;
 // string IDs
 #define stringID_Smart    0
 #define stringID_Notice    1
-#define stringID_Easy    2
-#define stringID_Fast    3
+#define stringID_Fast    2
+#define stringID_Easy    3
 
 extern const leStringTable stringTable;
 
@@ -201,8 +201,8 @@ extern const leStringTable stringTable;
 // string list
 extern leTableString string_Smart;
 extern leTableString string_Notice;
-extern leTableString string_Easy;
 extern leTableString string_Fast;
+extern leTableString string_Easy;
 
 void initializeStrings(void);
 //DOM-IGNORE-BEGIN

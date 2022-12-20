@@ -7,7 +7,7 @@ leWidget* Screen0_PanelWidget_0;
 leImageWidget* Screen0_ImageWidget_0;
 leImageWidget* Screen0_ImageWidget_1;
 leButtonWidget* Screen0_ButtonWidget_0;
-leWidget* Screen0_PanelWidget_1;
+leRectangleWidget* Screen0_RectangleWidget_0;
 leLabelWidget* Screen0_LabelWidget_0;
 
 static leBool initialized = LE_FALSE;
@@ -44,7 +44,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_ImageWidget_0 = leImageWidget_New();
     Screen0_ImageWidget_0->fn->setPosition(Screen0_ImageWidget_0, 10, 10);
-    Screen0_ImageWidget_0->fn->setSize(Screen0_ImageWidget_0, 152, 40);
+    Screen0_ImageWidget_0->fn->setSize(Screen0_ImageWidget_0, 144, 39);
     Screen0_ImageWidget_0->fn->setBackgroundType(Screen0_ImageWidget_0, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ImageWidget_0->fn->setBorderType(Screen0_ImageWidget_0, LE_WIDGET_BORDER_NONE);
     Screen0_ImageWidget_0->fn->setImage(Screen0_ImageWidget_0, (leImage*)&MicrochipLogo);
@@ -66,11 +66,13 @@ leResult screenShow_Screen0(void)
     Screen0_ButtonWidget_0->fn->setReleasedImage(Screen0_ButtonWidget_0, (leImage*)&button_off);
     root0->fn->addChild(root0, (leWidget*)Screen0_ButtonWidget_0);
 
-    Screen0_PanelWidget_1 = leWidget_New();
-    Screen0_PanelWidget_1->fn->setPosition(Screen0_PanelWidget_1, 237, 198);
-    Screen0_PanelWidget_1->fn->setSize(Screen0_PanelWidget_1, 378, 137);
-    Screen0_PanelWidget_1->fn->setScheme(Screen0_PanelWidget_1, &translucentScheme);
-    root0->fn->addChild(root0, (leWidget*)Screen0_PanelWidget_1);
+    Screen0_RectangleWidget_0 = leRectangleWidget_New();
+    Screen0_RectangleWidget_0->fn->setPosition(Screen0_RectangleWidget_0, 215, 200);
+    Screen0_RectangleWidget_0->fn->setSize(Screen0_RectangleWidget_0, 395, 140);
+    Screen0_RectangleWidget_0->fn->setScheme(Screen0_RectangleWidget_0, &TranslucentScheme);
+    Screen0_RectangleWidget_0->fn->setBorderType(Screen0_RectangleWidget_0, LE_WIDGET_BORDER_NONE);
+    Screen0_RectangleWidget_0->fn->setThickness(Screen0_RectangleWidget_0, 2);
+    root0->fn->addChild(root0, (leWidget*)Screen0_RectangleWidget_0);
 
     Screen0_LabelWidget_0 = leLabelWidget_New();
     Screen0_LabelWidget_0->fn->setPosition(Screen0_LabelWidget_0, 257, 209);
@@ -104,7 +106,7 @@ void screenHide_Screen0(void)
     Screen0_ImageWidget_0 = NULL;
     Screen0_ImageWidget_1 = NULL;
     Screen0_ButtonWidget_0 = NULL;
-    Screen0_PanelWidget_1 = NULL;
+    Screen0_RectangleWidget_0 = NULL;
     Screen0_LabelWidget_0 = NULL;
 
 
