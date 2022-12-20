@@ -70,7 +70,6 @@ APP_DATA appData;
 
 /* TODO:  Add any necessary local functions.
 */
-#include "definitions.h"
 
 
 // *****************************************************************************

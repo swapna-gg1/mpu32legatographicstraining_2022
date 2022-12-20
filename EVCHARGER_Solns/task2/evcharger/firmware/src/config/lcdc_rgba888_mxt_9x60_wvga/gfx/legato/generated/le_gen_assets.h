@@ -63,48 +63,48 @@ extern const lePalette leGlobalPalette;
  *****************************************************************************/
 /*********************************
  * Legato Image Asset
- * Name:   QuickstartDown_WVGA
- * Size:   260x120 pixels
+ * Name:   mchpLogo_small
+ * Size:   120x28 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage QuickstartDown_WVGA;
+extern leImage mchpLogo_small;
 
 /*********************************
  * Legato Image Asset
- * Name:   QuickstartUp_WVGA
- * Size:   260x120 pixels
+ * Name:   MHGS_logo_smaller
+ * Size:   180x169 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage QuickstartUp_WVGA;
+extern leImage MHGS_logo_smaller;
 
 /*********************************
  * Legato Image Asset
- * Name:   MHGS_logo_WVGA
- * Size:   320x300 pixels
+ * Name:   QuickstartDown_WQVGA
+ * Size:   160x74 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage MHGS_logo_WVGA;
+extern leImage QuickstartDown_WQVGA;
 
 /*********************************
  * Legato Image Asset
- * Name:   mchpLogo_light
- * Size:   152x40 pixels
+ * Name:   QuickstartUp_WQVGA
+ * Size:   160x74 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage mchpLogo_light;
+extern leImage QuickstartUp_WQVGA;
 
 /*********************************
  * Legato Image Asset
- * Name:   MicrochipLogo
- * Size:   144x39 pixels
+ * Name:   background0
+ * Size:   800x326 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage MicrochipLogo;
+extern leImage background0;
 
 /*********************************
  * Legato Image Asset
@@ -126,57 +126,138 @@ extern leImage button_on;
 
 /*********************************
  * Legato Image Asset
- * Name:   Image0
- * Size:   800x326 pixels
+ * Name:   MicrochipLogo
+ * Size:   144x39 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage Image0;
+extern leImage MicrochipLogo;
 
 /*********************************
  * Legato Image Asset
- * Name:   round_button_off
+ * Name:   round_power_off
  * Size:   75x75 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage round_button_off;
+extern leImage round_power_off;
 
 /*********************************
  * Legato Image Asset
- * Name:   round_button_on
+ * Name:   round_power_on
  * Size:   75x75 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage round_button_on;
+extern leImage round_power_on;
 
 /*********************************
  * Legato Image Asset
- * Name:   Image1
- * Size:   800x459 pixels
+ * Name:   background
+ * Size:   800x480 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage Image1;
+extern leImage background;
 
 /*********************************
  * Legato Image Asset
- * Name:   Battery_horizontal
+ * Name:   Battery0
  * Size:   100x100 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage Battery_horizontal;
+extern leImage Battery0;
 
 /*********************************
  * Legato Image Asset
- * Name:   plus
- * Size:   50x50 pixels
+ * Name:   Battery1
+ * Size:   100x100 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage plus;
+extern leImage Battery1;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery2
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery2;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery3
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery3;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery4
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery4;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery5
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery5;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery6
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery6;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery7
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery7;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery8
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery8;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery9
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery9;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   Battery10
+ * Size:   100x100 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage Battery10;
 
 /*********************************
  * Legato Image Asset
@@ -198,6 +279,15 @@ extern leImage minusp;
 
 /*********************************
  * Legato Image Asset
+ * Name:   plus
+ * Size:   50x50 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage plus;
+
+/*********************************
+ * Legato Image Asset
  * Name:   plusp
  * Size:   50x50 pixels
  * Type:   RGB Data
@@ -210,42 +300,41 @@ extern leImage plusp;
  *****************************************************************************/
 /*********************************
  * Legato Font Asset
+ * Name:         NotoSans_Regular
+ * Height:       21
+ * Baseline:     22
+ * Style:        Antialias
+ * Glyph Count:  95
+ * Range Count:  17
+ * Glyph Ranges: 0x20-0x7E
+***********************************/
+extern leRasterFont NotoSans_Regular;
+
+/*********************************
+ * Legato Font Asset
  * Name:         NotoSans_48
  * Height:       21
- * Baseline:     36
- * Style:        Antialias
- * Glyph Count:  21
- * Range Count:  15
+ * Baseline:     37
+ * Style:        Plain
+ * Glyph Count:  96
+ * Range Count:  14
  * Glyph Ranges: 0xA
-                 0x20
-                 0x2C
-                 0x2E
-                 0x45-0x46
-                 0x50
-                 0x53
-                 0x61
-                 0x63
-                 0x65
-                 0x67
-                 0x6C-0x6D
-                 0x6F-0x70
-                 0x72-0x75
-                 0x79
+                 0x20-0x7E
 ***********************************/
 extern leRasterFont NotoSans_48;
 
 /*********************************
  * Legato Font Asset
- * Name:         Font0
+ * Name:         NotoMono14
  * Height:       37
  * Baseline:     12
  * Style:        Plain
  * Glyph Count:  96
- * Range Count:  18
+ * Range Count:  13
  * Glyph Ranges: 0xA
                  0x20-0x7E
 ***********************************/
-extern leRasterFont Font0;
+extern leRasterFont NotoMono14;
 
 /*****************************************************************************
  * Legato String Table
@@ -255,50 +344,50 @@ extern leRasterFont Font0;
  *****************************************************************************/
 
 // language IDs
-#define language_English    0
+#define language_Default    0
 
 // string IDs
-#define stringID_energy_unit    0
-#define stringID_Smart    1
-#define stringID_evcharger    2
-#define stringID_Notice    3
-#define stringID_remaining_charge    4
-#define stringID_energy    5
-#define stringID_Fast    6
-#define stringID_pwr_unit    7
-#define stringID_ctime_unit    8
-#define stringID_time_label    9
-#define stringID_rtime_unit    10
-#define stringID_ctime    11
-#define stringID_denergy_label    12
-#define stringID_ctime_label    13
-#define stringID_Easy    14
-#define stringID_rtime    15
-#define stringID_pwr    16
-#define stringID_op_label    17
+#define stringID_ctime    0
+#define stringID_denergy_label    1
+#define stringID_rtime_unit    2
+#define stringID_time_label    3
+#define stringID_pwr_unit    4
+#define stringID_pwr    5
+#define stringID_energy_unit    6
+#define stringID_remaining_charge    7
+#define stringID_rtime    8
+#define stringID_Smart    9
+#define stringID_Notice    10
+#define stringID_ctime_unit    11
+#define stringID_ctime_label    12
+#define stringID_op_label    13
+#define stringID_energy    14
+#define stringID_evcharger    15
+#define stringID_Fast    16
+#define stringID_Easy    17
 
 extern const leStringTable stringTable;
 
 
 // string list
-extern leTableString string_energy_unit;
-extern leTableString string_Smart;
-extern leTableString string_evcharger;
-extern leTableString string_Notice;
-extern leTableString string_remaining_charge;
-extern leTableString string_energy;
-extern leTableString string_Fast;
-extern leTableString string_pwr_unit;
-extern leTableString string_ctime_unit;
-extern leTableString string_time_label;
-extern leTableString string_rtime_unit;
 extern leTableString string_ctime;
 extern leTableString string_denergy_label;
-extern leTableString string_ctime_label;
-extern leTableString string_Easy;
-extern leTableString string_rtime;
+extern leTableString string_rtime_unit;
+extern leTableString string_time_label;
+extern leTableString string_pwr_unit;
 extern leTableString string_pwr;
+extern leTableString string_energy_unit;
+extern leTableString string_remaining_charge;
+extern leTableString string_rtime;
+extern leTableString string_Smart;
+extern leTableString string_Notice;
+extern leTableString string_ctime_unit;
+extern leTableString string_ctime_label;
 extern leTableString string_op_label;
+extern leTableString string_energy;
+extern leTableString string_evcharger;
+extern leTableString string_Fast;
+extern leTableString string_Easy;
 
 void initializeStrings(void);
 //DOM-IGNORE-BEGIN
