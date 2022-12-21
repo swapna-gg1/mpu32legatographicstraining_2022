@@ -28,8 +28,8 @@
 // *****************************************************************************
 
 #include "app.h"
+#include "definitions.h"
 #include "gfx/canvas/gfx_canvas_api.h"
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -53,16 +53,6 @@
 
 APP_DATA appData;
 
-
-SCREEN_STATES getScreen(void)
-{
-    return appData.demo_screen;
-}
-void setScreen(SCREEN_STATES screen)
-{
-    appData.demo_screen = screen;
-}
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -78,10 +68,17 @@ void setScreen(SCREEN_STATES screen)
 // *****************************************************************************
 // *****************************************************************************
 
+SCREEN_STATES getScreen(void)
+{
+    return appData.demo_screen;
+}
+void setScreen(SCREEN_STATES screen)
+{
+    appData.demo_screen = screen;
+}
 
 /* TODO:  Add any necessary local functions.
 */
-#include "definitions.h"
 
 
 // *****************************************************************************
@@ -103,21 +100,24 @@ void APP_Initialize ( void )
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
     appData.demo_screen = DEMO_SCREEN0;
+
     gfxcSetLayer(LAYER_0_CANVAS_ID, LAYER_0_ID);
     gfxcSetWindowPosition(LAYER_0_CANVAS_ID, 0, 0);
     gfxcSetWindowSize(LAYER_0_CANVAS_ID, 800, 480);
     
     gfxcSetLayer(LAYER_1_CANVAS_ID, LAYER_1_ID);
     gfxcSetWindowPosition(LAYER_1_CANVAS_ID, 0, 0);
-    gfxcSetWindowSize(LAYER_1_CANVAS_ID, 800, 480);
-  
+    gfxcSetWindowSize(LAYER_1_CANVAS_ID, 800, 480);       
+
     gfxcSetLayer(LAYER_2_CANVAS_ID, LAYER_2_ID);
     gfxcSetWindowPosition(LAYER_2_CANVAS_ID, 0, 0);
     gfxcSetWindowSize(LAYER_2_CANVAS_ID, 800, 480);
-    
+  
     gfxcSetLayer(CABLE_ANIMATE_CANVAS_ID, LAYER_2_ID);
-    gfxcSetWindowPosition(CABLE_ANIMATE_CANVAS_ID, 58, 112);
-    gfxcSetWindowSize(CABLE_ANIMATE_CANVAS_ID, 178, 258);
+    gfxcSetWindowPosition(CABLE_ANIMATE_CANVAS_ID, 58, 48);
+    gfxcSetWindowSize(CABLE_ANIMATE_CANVAS_ID, 161, 261);
+
+
 
     /* TODO: Initialize your application's state machine and other
      * parameters.
@@ -143,6 +143,7 @@ void APP_Tasks ( void )
         case APP_STATE_INIT:
         {
             bool appInitialized = true;
+
             init_Screen1();
             init_Screen0();
             if (appInitialized)
@@ -163,7 +164,7 @@ void APP_Tasks ( void )
             if(appData.demo_screen == DEMO_SCREEN2){
                 Update_Screen2();                            
             }
-            
+
             break;
         }
 

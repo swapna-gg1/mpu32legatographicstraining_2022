@@ -40,23 +40,20 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
-    
-#define LAYER_0_CANVAS_ID 0
-#define LAYER_1_CANVAS_ID 1
-#define LAYER_2_CANVAS_ID 2
-#define CABLE_ANIMATE_CANVAS_ID 3
-
- 
-#define LAYER_0_ID 0
-#define LAYER_1_ID 1    
-#define LAYER_2_ID 2
-   
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+#define LAYER_0_CANVAS_ID 0
+#define LAYER_1_CANVAS_ID 1
+#define LAYER_2_CANVAS_ID 2
+#define CABLE_ANIMATE_CANVAS_ID 3 
+
+#define LAYER_0_ID 0
+#define LAYER_1_ID 1
+#define LAYER_2_ID 2    
 
 // *****************************************************************************
 /* Application states
@@ -148,9 +145,11 @@ typedef struct
 
 void APP_Initialize ( void );
 
+/* Initialize screen1 */
 void init_Screen1(void);
-void Update_Screen1(void);
 
+/* Update screen1 */
+void Update_Screen1 (void);
 /*******************************************************************************
   Function:
     void APP_Tasks ( void )

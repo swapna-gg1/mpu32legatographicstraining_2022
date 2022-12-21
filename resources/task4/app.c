@@ -28,8 +28,8 @@
 // *****************************************************************************
 
 #include "app.h"
+#include "definitions.h"
 #include "gfx/canvas/gfx_canvas_api.h"
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -71,7 +71,6 @@ APP_DATA appData;
 
 /* TODO:  Add any necessary local functions.
 */
-#include "definitions.h"
 
 
 // *****************************************************************************
@@ -99,15 +98,17 @@ void APP_Initialize ( void )
     
     gfxcSetLayer(LAYER_1_CANVAS_ID, LAYER_1_ID);
     gfxcSetWindowPosition(LAYER_1_CANVAS_ID, 0, 0);
-    gfxcSetWindowSize(LAYER_1_CANVAS_ID, 800, 480);
-  
+    gfxcSetWindowSize(LAYER_1_CANVAS_ID, 800, 480);       
+
     gfxcSetLayer(LAYER_2_CANVAS_ID, LAYER_2_ID);
     gfxcSetWindowPosition(LAYER_2_CANVAS_ID, 0, 0);
     gfxcSetWindowSize(LAYER_2_CANVAS_ID, 800, 480);
-    
+  
     gfxcSetLayer(CABLE_ANIMATE_CANVAS_ID, LAYER_2_ID);
-    gfxcSetWindowPosition(CABLE_ANIMATE_CANVAS_ID, 58, 112);
-    gfxcSetWindowSize(CABLE_ANIMATE_CANVAS_ID, 178, 258);
+    gfxcSetWindowPosition(CABLE_ANIMATE_CANVAS_ID, 58, 48);
+    gfxcSetWindowSize(CABLE_ANIMATE_CANVAS_ID, 161, 261);
+
+
 
     /* TODO: Initialize your application's state machine and other
      * parameters.
@@ -133,6 +134,7 @@ void APP_Tasks ( void )
         case APP_STATE_INIT:
         {
             bool appInitialized = true;
+
             init_Screen1();
             if (appInitialized)
             {
@@ -146,6 +148,7 @@ void APP_Tasks ( void )
         {
             if(legato_getCurrentScreen()==screenID_Screen1)
                 Update_Screen1();
+           
 
             break;
         }

@@ -272,7 +272,6 @@ void SYS_Initialize ( void* data )
 
 
 
-	BSP_Initialize();
     MMU_Initialize();
 
     AIC_INT_Initialize();
@@ -284,14 +283,15 @@ void SYS_Initialize ( void* data )
     TC1_CH0_TimerInitialize(); 
      
     
-    FLEXCOM6_TWI_Initialize();
-
-	RTC_Initialize();
-
  
     TC0_CH0_TimerInitialize(); 
     TC0_CH1_TimerInitialize(); 
     TC0_CH2_TimerInitialize();
+    FLEXCOM6_TWI_Initialize();
+
+	RTC_Initialize();
+
+	BSP_Initialize();
 
     /* Initialize I2C0 Driver Instance */
     sysObj.drvI2C0 = DRV_I2C_Initialize(DRV_I2C_INDEX_0, (SYS_MODULE_INIT *)&drvI2C0InitData);

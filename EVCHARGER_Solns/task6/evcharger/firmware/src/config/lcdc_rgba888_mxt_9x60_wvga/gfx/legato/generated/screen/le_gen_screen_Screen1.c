@@ -5,7 +5,7 @@ static leWidget* root0;
 static leWidget* root1;
 static leWidget* root2;
 
-leWidget* Screen1_Panel_0;
+leWidget* Screen1_PanelWidget_0;
 leImageWidget* Screen1_ImageWidget_1;
 leImageWidget* Screen1_ImageWidget_0;
 leLabelWidget* Screen1_LabelWidget_0;
@@ -60,18 +60,18 @@ leResult screenShow_Screen1(void)
     root0->flags |= LE_WIDGET_IGNOREEVENTS;
     root0->flags |= LE_WIDGET_IGNOREPICK;
 
-    Screen1_Panel_0 = leWidget_New();
-    Screen1_Panel_0->fn->setPosition(Screen1_Panel_0, 0, 0);
-    Screen1_Panel_0->fn->setSize(Screen1_Panel_0, 800, 480);
-    Screen1_Panel_0->fn->setScheme(Screen1_Panel_0, &BlackScheme);
-    root0->fn->addChild(root0, (leWidget*)Screen1_Panel_0);
+    Screen1_PanelWidget_0 = leWidget_New();
+    Screen1_PanelWidget_0->fn->setPosition(Screen1_PanelWidget_0, 0, 0);
+    Screen1_PanelWidget_0->fn->setSize(Screen1_PanelWidget_0, 800, 480);
+    Screen1_PanelWidget_0->fn->setScheme(Screen1_PanelWidget_0, &BlackScheme);
+    root0->fn->addChild(root0, (leWidget*)Screen1_PanelWidget_0);
 
     Screen1_ImageWidget_1 = leImageWidget_New();
-    Screen1_ImageWidget_1->fn->setPosition(Screen1_ImageWidget_1, 0, 59);
+    Screen1_ImageWidget_1->fn->setPosition(Screen1_ImageWidget_1, 0, 0);
     Screen1_ImageWidget_1->fn->setSize(Screen1_ImageWidget_1, 800, 480);
     Screen1_ImageWidget_1->fn->setBackgroundType(Screen1_ImageWidget_1, LE_WIDGET_BACKGROUND_NONE);
     Screen1_ImageWidget_1->fn->setBorderType(Screen1_ImageWidget_1, LE_WIDGET_BORDER_NONE);
-    Screen1_ImageWidget_1->fn->setImage(Screen1_ImageWidget_1, (leImage*)&Image1);
+    Screen1_ImageWidget_1->fn->setImage(Screen1_ImageWidget_1, (leImage*)&background);
     root0->fn->addChild(root0, (leWidget*)Screen1_ImageWidget_1);
 
     Screen1_ImageWidget_0 = leImageWidget_New();
@@ -102,6 +102,7 @@ leResult screenShow_Screen1(void)
 
     Screen1_LabelWidget_1 = leLabelWidget_New();
     Screen1_LabelWidget_1->fn->setPosition(Screen1_LabelWidget_1, 68, 368);
+    Screen1_LabelWidget_1->fn->setSize(Screen1_LabelWidget_1, 100, 35);
     Screen1_LabelWidget_1->fn->setScheme(Screen1_LabelWidget_1, &WhiteScheme);
     Screen1_LabelWidget_1->fn->setBackgroundType(Screen1_LabelWidget_1, LE_WIDGET_BACKGROUND_NONE);
     Screen1_LabelWidget_1->fn->setString(Screen1_LabelWidget_1, (leString*)&string_op_label);
@@ -109,6 +110,7 @@ leResult screenShow_Screen1(void)
 
     Screen1_LabelWidget_2 = leLabelWidget_New();
     Screen1_LabelWidget_2->fn->setPosition(Screen1_LabelWidget_2, 178, 368);
+    Screen1_LabelWidget_2->fn->setSize(Screen1_LabelWidget_2, 100, 35);
     Screen1_LabelWidget_2->fn->setScheme(Screen1_LabelWidget_2, &WhiteScheme);
     Screen1_LabelWidget_2->fn->setBackgroundType(Screen1_LabelWidget_2, LE_WIDGET_BACKGROUND_NONE);
     Screen1_LabelWidget_2->fn->setString(Screen1_LabelWidget_2, (leString*)&string_ctime_label);
@@ -116,6 +118,7 @@ leResult screenShow_Screen1(void)
 
     Screen1_LabelWidget_3 = leLabelWidget_New();
     Screen1_LabelWidget_3->fn->setPosition(Screen1_LabelWidget_3, 275, 368);
+    Screen1_LabelWidget_3->fn->setSize(Screen1_LabelWidget_3, 100, 35);
     Screen1_LabelWidget_3->fn->setScheme(Screen1_LabelWidget_3, &WhiteScheme);
     Screen1_LabelWidget_3->fn->setBackgroundType(Screen1_LabelWidget_3, LE_WIDGET_BACKGROUND_NONE);
     Screen1_LabelWidget_3->fn->setString(Screen1_LabelWidget_3, (leString*)&string_denergy_label);
@@ -123,6 +126,7 @@ leResult screenShow_Screen1(void)
 
     Screen1_LabelWidget_4 = leLabelWidget_New();
     Screen1_LabelWidget_4->fn->setPosition(Screen1_LabelWidget_4, 390, 368);
+    Screen1_LabelWidget_4->fn->setSize(Screen1_LabelWidget_4, 100, 35);
     Screen1_LabelWidget_4->fn->setScheme(Screen1_LabelWidget_4, &WhiteScheme);
     Screen1_LabelWidget_4->fn->setBackgroundType(Screen1_LabelWidget_4, LE_WIDGET_BACKGROUND_NONE);
     Screen1_LabelWidget_4->fn->setString(Screen1_LabelWidget_4, (leString*)&string_time_label);
@@ -238,7 +242,7 @@ leResult screenShow_Screen1(void)
 
     Screen1_ButtonWidget_minus = leButtonWidget_New();
     Screen1_ButtonWidget_minus->fn->setPosition(Screen1_ButtonWidget_minus, 690, 410);
-    Screen1_ButtonWidget_minus->fn->setSize(Screen1_ButtonWidget_minus, 67, 69);
+    Screen1_ButtonWidget_minus->fn->setSize(Screen1_ButtonWidget_minus, 57, 61);
     Screen1_ButtonWidget_minus->fn->setBackgroundType(Screen1_ButtonWidget_minus, LE_WIDGET_BACKGROUND_NONE);
     Screen1_ButtonWidget_minus->fn->setBorderType(Screen1_ButtonWidget_minus, LE_WIDGET_BORDER_NONE);
     Screen1_ButtonWidget_minus->fn->setPressedImage(Screen1_ButtonWidget_minus, (leImage*)&minusp);
@@ -247,7 +251,7 @@ leResult screenShow_Screen1(void)
     root1->fn->addChild(root1, (leWidget*)Screen1_ButtonWidget_minus);
 
     Screen1_rtc_label = leLabelWidget_New();
-    Screen1_rtc_label->fn->setPosition(Screen1_rtc_label, 399, 19);
+    Screen1_rtc_label->fn->setPosition(Screen1_rtc_label, 386, 20);
     Screen1_rtc_label->fn->setSize(Screen1_rtc_label, 165, 25);
     Screen1_rtc_label->fn->setScheme(Screen1_rtc_label, &WhiteScheme);
     Screen1_rtc_label->fn->setBackgroundType(Screen1_rtc_label, LE_WIDGET_BACKGROUND_NONE);
@@ -286,7 +290,7 @@ leResult screenShow_Screen1(void)
     Screen1_RectangleWidget_5->fn->setPosition(Screen1_RectangleWidget_5, 263, 153);
     Screen1_RectangleWidget_5->fn->setSize(Screen1_RectangleWidget_5, 361, 128);
     Screen1_RectangleWidget_5->fn->setVisible(Screen1_RectangleWidget_5, LE_FALSE);
-    Screen1_RectangleWidget_5->fn->setScheme(Screen1_RectangleWidget_5, &translucentScheme);
+    Screen1_RectangleWidget_5->fn->setScheme(Screen1_RectangleWidget_5, &TranslucentScheme);
     Screen1_RectangleWidget_5->fn->setBorderType(Screen1_RectangleWidget_5, LE_WIDGET_BORDER_NONE);
     Screen1_RectangleWidget_5->fn->setThickness(Screen1_RectangleWidget_5, 2);
     root1->fn->addChild(root1, (leWidget*)Screen1_RectangleWidget_5);
@@ -337,7 +341,7 @@ void screenHide_Screen1(void)
     leWidget_Delete(root0);
     root0 = NULL;
 
-    Screen1_Panel_0 = NULL;
+    Screen1_PanelWidget_0 = NULL;
     Screen1_ImageWidget_1 = NULL;
     Screen1_ImageWidget_0 = NULL;
 

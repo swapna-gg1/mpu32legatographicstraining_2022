@@ -48,7 +48,6 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bsp/bsp.h"
 #include "gfx/legato/generated/le_gen_harmony.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
@@ -56,14 +55,15 @@
 #include "peripheral/aic/plib_aic.h"
 #include "gfx/driver/controller/lcdc/drv_gfx_lcdc.h"
 #include "peripheral/tc/plib_tc1.h"
-#include "peripheral/rtc/plib_rtc.h"
-#include "peripheral/flexcom/twi/master/plib_flexcom6_twi_master.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "peripheral/flexcom/twi/master/plib_flexcom6_twi_master.h"
+#include "peripheral/rtc/plib_rtc.h"
 #include "peripheral/lcdc/plib_lcdc.h"
-#include "system/time/sys_time.h"
-#include "gfx/canvas/gfx_canvas_api.h"
 #include "driver/i2c/drv_i2c.h"
+#include "gfx/canvas/gfx_canvas_api.h"
+#include "system/time/sys_time.h"
 #include "system/input/sys_input.h"
+#include "bsp/bsp.h"
 #include "driver/input/drv_maxtouch.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"

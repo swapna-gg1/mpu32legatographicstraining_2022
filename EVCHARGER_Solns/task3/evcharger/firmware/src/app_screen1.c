@@ -7,27 +7,26 @@
 
 #define MAX_TIME_STRING_LEN     18
 
-// Structure to store RTC data
-struct tm currentTime;
-//variable to keep track of when to update time
-int lastminute;
-//Legato string object
+   // Structure to store RTC data
+   struct tm currentTime;
+   //variable to keep track of when to update time
+   int lastminute;
+   //Legato string object
 leFixedString p_timestring;
 
-//Legato Char buffer
+   //Legato Char buffer
 static leChar p_legatoTimeBuff[MAX_TIME_STRING_LEN] = {0};
 
-//C character buffer
+   //C character buffer
 static char p_timecharbuff[MAX_TIME_STRING_LEN];
 
 void init_RTC_Label_Screen1(void)
 {
     lastminute=0;
     leFixedString_Constructor(&p_timestring,  p_legatoTimeBuff, MAX_TIME_STRING_LEN *2);
-    p_timestring.fn->setFont(&p_timestring, (leFont*)& NotoMono_14);
+    p_timestring.fn->setFont(&p_timestring, (leFont*)& NotoMono14);
 
 }
-
 
 void UpdateTime_Label (void)
 {
@@ -42,3 +41,5 @@ void UpdateTime_Label (void)
         Screen1_rtc_label->fn->setString(Screen1_rtc_label, (leString*)&p_timestring);
     }
 }
+
+

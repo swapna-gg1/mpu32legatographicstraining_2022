@@ -137,9 +137,11 @@ typedef struct
 
 void APP_Initialize ( void );
 
+/* Initialize the legato variable to handle RTC as dynamic string */
 void init_RTC_Label_Screen1(void);
-void UpdateTime_Label (void);
 
+/* Update the RTC label dynamically */
+void UpdateTime_Label (void);
 /*******************************************************************************
   Function:
     void APP_Tasks ( void )

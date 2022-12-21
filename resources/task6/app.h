@@ -40,27 +40,24 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
-    
-#define LAYER_0_CANVAS_ID 0
-#define LAYER_1_CANVAS_ID 1
-#define LAYER_2_CANVAS_ID 2
-#define CABLE_ANIMATE_CANVAS_ID 3
-
- 
-#define LAYER_0_ID 0
-#define LAYER_1_ID 1    
-#define LAYER_2_ID 2
-   
-extern uint8_t percent_battery_charge;
-extern int     remaining_time;  //unit min
-extern int     charged_time;   // unit min
-extern int     delivered_energy; // unit KWh
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+#define LAYER_0_CANVAS_ID 0
+#define LAYER_1_CANVAS_ID 1
+#define LAYER_2_CANVAS_ID 2
+#define CABLE_ANIMATE_CANVAS_ID 3 
+
+#define LAYER_0_ID 0
+#define LAYER_1_ID 1
+#define LAYER_2_ID 2    
+extern uint8_t percent_battery_charge;
+extern int     remaining_time;  //unit min
+extern int     charged_time;   // unit min
+extern int     delivered_energy; // unit KWh
 
 // *****************************************************************************
 /* Application states
@@ -84,14 +81,13 @@ typedef enum
 
 typedef enum
 {
-    /* Application's state machine's initial state. */
     DEMO_SCREEN0=0,
     DEMO_SCREEN1,
     DEMO_SCREEN2,
     DEMO_SCREEN3,
-    /* TODO: Define states used by the application state machine. */
-
+  
 } SCREEN_STATES;
+
 // *****************************************************************************
 /* Application Data
 
@@ -161,14 +157,20 @@ typedef struct
 
 void APP_Initialize ( void );
 
+/* Initialize screen1 */
 void init_Screen1(void);
-void Update_Screen1(void);
+
+/* Update screen1 */
+void Update_Screen1 (void);
+
 void init_Screen0(void);
 void Update_Screen2(void);
 
 SCREEN_STATES getScreen(void);
 void setScreen(SCREEN_STATES screen);
 uint8_t get_screensaver_cnt(void);
+
+
 /*******************************************************************************
   Function:
     void APP_Tasks ( void )

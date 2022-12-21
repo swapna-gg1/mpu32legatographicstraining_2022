@@ -13,7 +13,7 @@ extern "C" {
 // DOM-IGNORE-END
 
 // screen member widget declarations
-extern leWidget* Screen1_Panel_0;
+extern leWidget* Screen1_PanelWidget_0;
 extern leImageWidget* Screen1_ImageWidget_1;
 extern leImageWidget* Screen1_ImageWidget_0;
 extern leImageWidget* Screen1_ImageWidget_2;
