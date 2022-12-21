@@ -189,7 +189,7 @@ leResult screenShow_Screen0(void)
     root1->flags |= LE_WIDGET_IGNOREPICK;
 
     Screen0_ImageWidget_2 = leImageWidget_New();
-    Screen0_ImageWidget_2->fn->setPosition(Screen0_ImageWidget_2, 0, 59);
+    Screen0_ImageWidget_2->fn->setPosition(Screen0_ImageWidget_2, 0, 0);
     Screen0_ImageWidget_2->fn->setSize(Screen0_ImageWidget_2, 800, 480);
     Screen0_ImageWidget_2->fn->setVisible(Screen0_ImageWidget_2, LE_FALSE);
     Screen0_ImageWidget_2->fn->setBackgroundType(Screen0_ImageWidget_2, LE_WIDGET_BACKGROUND_NONE);

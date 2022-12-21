@@ -350,6 +350,7 @@ static void updateWidget(leWidget* wgt, uint32_t dt)
 
     for(i = 0; i < wgt->children.size; i++)
     {
+
         child = wgt->children.values[i];
 
         updateWidget(child, dt);

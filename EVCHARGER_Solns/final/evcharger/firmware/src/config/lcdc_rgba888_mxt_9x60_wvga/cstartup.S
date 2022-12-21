@@ -254,7 +254,7 @@ resetHandler:
     mov     r0, #0
 
 /* Initialize the C library */
-
+    	bl	__pic32c_data_initialization
 	bl      __libc_init_array
 
 /* Branch to main() */

@@ -1,9 +1,9 @@
 format_version: v1.0
 configName: lcdc_rgba888_mxt_9x60_wvga
-folderName: ev_charger_9x60_cu_wvga
-frameworkPath: C:\Users\c40450\Harmony3
+folderName: evcharger_9x60_cu_tm5000
+frameworkPath: C:\Users\c40450\harmony3_evcharger
 processor: SAM9X60D1G
-projectName: ev_charger_9x60_cu_wvga
+projectName: evcharger_9x60_cu_tm5000
 settings:
   PackageFilter: ''
   FORCE_OPTIMIZATION: 'false'

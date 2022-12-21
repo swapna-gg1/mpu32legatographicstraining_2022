@@ -243,129 +243,129 @@ extern leImage Battery10;
 
 /*********************************
  * Legato Image Asset
- * Name:   background0
- * Size:   178x258 pixels
+ * Name:   cable0
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background0;
+extern leImage cable0;
 
 /*********************************
  * Legato Image Asset
- * Name:   background1
- * Size:   178x258 pixels
+ * Name:   cable1
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background1;
+extern leImage cable1;
 
 /*********************************
  * Legato Image Asset
- * Name:   background2
- * Size:   178x258 pixels
+ * Name:   cable2
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background2;
+extern leImage cable2;
 
 /*********************************
  * Legato Image Asset
- * Name:   background3
- * Size:   178x258 pixels
+ * Name:   cable3
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background3;
+extern leImage cable3;
 
 /*********************************
  * Legato Image Asset
- * Name:   background4
- * Size:   178x258 pixels
+ * Name:   cable4
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background4;
+extern leImage cable4;
 
 /*********************************
  * Legato Image Asset
- * Name:   background5
- * Size:   178x258 pixels
+ * Name:   cable5
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background5;
+extern leImage cable5;
 
 /*********************************
  * Legato Image Asset
- * Name:   background6
- * Size:   178x258 pixels
+ * Name:   cable6
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background6;
+extern leImage cable6;
 
 /*********************************
  * Legato Image Asset
- * Name:   background7
- * Size:   178x258 pixels
+ * Name:   cable7
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background7;
+extern leImage cable7;
 
 /*********************************
  * Legato Image Asset
- * Name:   background8
- * Size:   178x258 pixels
+ * Name:   cable8
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background8;
+extern leImage cable8;
 
 /*********************************
  * Legato Image Asset
- * Name:   background9
- * Size:   178x258 pixels
+ * Name:   cable9
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background9;
+extern leImage cable9;
 
 /*********************************
  * Legato Image Asset
- * Name:   background10
- * Size:   178x258 pixels
+ * Name:   cable10
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background10;
+extern leImage cable10;
 
 /*********************************
  * Legato Image Asset
- * Name:   background11
- * Size:   178x258 pixels
+ * Name:   cable11
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background11;
+extern leImage cable11;
 
 /*********************************
  * Legato Image Asset
- * Name:   background12
- * Size:   178x258 pixels
+ * Name:   cable12
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background12;
+extern leImage cable12;
 
 /*********************************
  * Legato Image Asset
- * Name:   background13
- * Size:   178x258 pixels
+ * Name:   cable13
+ * Size:   161x261 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage background13;
+extern leImage cable13;
 
 /*****************************************************************************
  * Legato Graphics Font Assets

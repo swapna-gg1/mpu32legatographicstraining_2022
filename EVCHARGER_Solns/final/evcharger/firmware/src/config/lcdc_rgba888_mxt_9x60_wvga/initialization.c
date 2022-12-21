@@ -283,14 +283,14 @@ void SYS_Initialize ( void* data )
     TC1_CH0_TimerInitialize(); 
      
     
-	RTC_Initialize();
-
-    FLEXCOM6_TWI_Initialize();
-
  
     TC0_CH0_TimerInitialize(); 
     TC0_CH1_TimerInitialize(); 
     TC0_CH2_TimerInitialize();
+    FLEXCOM6_TWI_Initialize();
+
+	RTC_Initialize();
+
 	BSP_Initialize();
 
     /* Initialize I2C0 Driver Instance */

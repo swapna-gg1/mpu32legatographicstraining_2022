@@ -40,27 +40,23 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
-    
-#define LAYER_0_CANVAS_ID 0
-#define LAYER_1_CANVAS_ID 1
-#define CABLE_ANIMATE_CANVAS_ID 2
-
- 
-#define LAYER_0_ID 0
-#define LAYER_1_ID 1    
-#define LAYER_2_ID 2
- 
-    
-extern uint8_t percent_battery_charge;
-extern int     remaining_time;  //unit min
-extern int     charged_time;   // unit min
-extern int     delivered_energy; // unit KWh
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+#define LAYER_0_CANVAS_ID 0
+#define LAYER_1_CANVAS_ID 1
+#define CABLE_ANIMATE_CANVAS_ID 2
+
+#define LAYER_0_ID 0
+#define LAYER_1_ID 1
+#define LAYER_2_ID 2    
+extern uint8_t percent_battery_charge;
+extern int     remaining_time;  //unit min
+extern int     charged_time;   // unit min
+extern int     delivered_energy; // unit KWh
 
 // *****************************************************************************
 /* Application states
@@ -92,6 +88,7 @@ typedef enum
     /* TODO: Define states used by the application state machine. */
 
 } SCREEN_STATES;
+
 // *****************************************************************************
 /* Application Data
 
@@ -168,11 +165,13 @@ void init_Scene2(void);
 void Update_Scene1(void);
 void Update_Scene2(void);
 void exitScene1(void);
-int get_rt(void);
+int get_rt(void); //get remaining time
 
-SCREEN_STATES getScreen(void);
-void setScreen(SCREEN_STATES screen);
+SCREEN_STATES getScreen(void); //which screen state are we in
+void setScreen(SCREEN_STATES screen); //set the screen state
 uint8_t get_screensaver_cnt(void);
+
+
 /*******************************************************************************
   Function:
     void APP_Tasks ( void )

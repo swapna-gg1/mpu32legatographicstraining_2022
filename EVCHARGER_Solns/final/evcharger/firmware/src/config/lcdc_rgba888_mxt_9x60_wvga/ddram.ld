@@ -68,10 +68,14 @@ SECTIONS
 		KEEP(*(SORT(.dtors.*)))
 		KEEP(*crtend.o(.dtors))
 
-	    *(.dinit*)
+	    //*(.dinit*)
 		. = ALIGN(4);
 	} >ram
-
+    .dinit :
+    {	 
+        *(.dinit*)
+	. = ALIGN(4);
+	} >ram
 	.data :
     {
 		*(.data .data.*);

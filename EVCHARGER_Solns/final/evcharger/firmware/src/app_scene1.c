@@ -158,27 +158,27 @@ void ShowScene1(void)
     gfxcCanvasUpdate(LAYER_0_CANVAS_ID);
     gfxcShowCanvas(LAYER_1_CANVAS_ID);  
     gfxcCanvasUpdate(LAYER_1_CANVAS_ID);
-    
+   
 }
 
 void init_anim_images(void)
 {
-    imgAnim[0]= background0;
-    imgAnim[1]= background1;
-    imgAnim[2]= background2;
-    imgAnim[3]= background3;
-    imgAnim[4]= background4;
-    imgAnim[5]= background5;
-    imgAnim[6]= background6;
-    imgAnim[7]= background7;
-    imgAnim[8]= background8;
-    imgAnim[9]= background9;
-    imgAnim[10]=background10;
-    imgAnim[11]=background11;
-    imgAnim[12]=background12;
-    imgAnim[13]=background13;
-}
+    imgAnim[0]= cable0;
+    imgAnim[1]= cable1;
+    imgAnim[2]= cable2;
+    imgAnim[3]= cable3;
+    imgAnim[4]= cable4;
+    imgAnim[5]= cable5;
+    imgAnim[6]= cable6;
+    imgAnim[7]= cable7;
+    imgAnim[8]= cable8;
+    imgAnim[9]= cable9;
+    imgAnim[10]= cable10;
+    imgAnim[11]= cable11;
+    imgAnim[12]= cable12;
+    imgAnim[13]= cable13;
 
+}
 
 void init_Scene1(void)
 {
@@ -186,6 +186,20 @@ void init_Scene1(void)
     /*Setting the RTC time label*/
     leFixedString_Constructor(&p_timestring,  p_legatoTimeBuff, MAX_TIME_STRING_LEN *2);
     p_timestring.fn->setFont(&p_timestring, (leFont*)& NotoMono_14);
+	/*Setting labels for the EV Charger meter*/
+    leFixedString_Constructor(&p_percentage,  p_legato_percentageBuff, 10);
+    p_percentage.fn->setFont(&p_percentage, (leFont*)&NotoSans_28);
+    
+    leFixedString_Constructor(&p_remainingT,  p_legato_remainingT_Buff, 8);
+    p_remainingT.fn->setFont(&p_remainingT, (leFont*)&NotoSans_28);
+    
+    leFixedString_Constructor(&p_chargeT,  p_legato_chargeT_Buff, 8);
+    p_chargeT.fn->setFont(&p_chargeT, (leFont*)&NotoSans_28);
+    
+    leFixedString_Constructor(&p_deliveredE,  p_legato_deliveredE_Buff, 8);
+    p_deliveredE.fn->setFont(&p_deliveredE, (leFont*)&NotoSans_28);
+
+
     // Using a 24hr clock, with 0 based day of week and month (0=Sunday, 0=January)
     // 3-31-2019 23:59:50 Sunday
     currentTime.tm_hour = 23;
@@ -203,22 +217,7 @@ void init_Scene1(void)
     
     /*TC0_CH1 callback to keep track of time to display the charging screen0*/
     TC0_CH1_TimerCallbackRegister(TC0_CH1_TimerInterruptHandler, (uintptr_t)NULL);
-    
-    /*Setting labels for the EV Charger meter*/
-    leFixedString_Constructor(&p_percentage,  p_legato_percentageBuff, 10);
-    p_percentage.fn->setFont(&p_percentage, (leFont*)&NotoSans_28);
-    
-    leFixedString_Constructor(&p_remainingT,  p_legato_remainingT_Buff, 8);
-    p_remainingT.fn->setFont(&p_remainingT, (leFont*)&NotoSans_28);
-    
-    leFixedString_Constructor(&p_chargeT,  p_legato_chargeT_Buff, 8);
-    p_chargeT.fn->setFont(&p_chargeT, (leFont*)&NotoSans_28);
-    
-    leFixedString_Constructor(&p_deliveredE,  p_legato_deliveredE_Buff, 8);
-    p_deliveredE.fn->setFont(&p_deliveredE, (leFont*)&NotoSans_28);
-
 }
-
 
 void UpdateTime_Label (void)
 {
@@ -234,14 +233,15 @@ void UpdateTime_Label (void)
     }
 }
 
+
 void UpdateChargeAnime_Canvas(void)
 {
-    if (tick != prev_tick)
+if (tick != prev_tick)
     {
-        prev_tick = tick;
+        prev_tick = tick;     
         gfxcSetPixelBuffer(CABLE_ANIMATE_CANVAS_ID,
-                       178,
-                       258,
+                       161,
+                       261,
                        GFX_COLOR_MODE_RGBA_8888,
                        (void *) imgAnim[++anim_cnt].buffer.pixels);
         if(anim_cnt >=13)
@@ -298,6 +298,7 @@ void update_meterLabels(void)
     gfxcCanvasUpdate(LAYER_1_CANVAS_ID);   
 }
 
+
 void event_Screen0_ButtonWidget_plus_OnReleased(leButtonWidget* btn)
 {
     screensaver_cnt = 0;
@@ -316,9 +317,7 @@ void event_Screen0_ButtonWidget_plus_OnReleased(leButtonWidget* btn)
         
     }else{
         
-        //calculate_meter_change();
-        //update_meterLabels();
-        Screen0_ImageSequenceWidget_0->fn->showNextImage(Screen0_ImageSequenceWidget_0);        
+           Screen0_ImageSequenceWidget_0->fn->showNextImage(Screen0_ImageSequenceWidget_0);        
     }
     gfxcShowCanvas(LAYER_1_CANVAS_ID);  
     gfxcCanvasUpdate(LAYER_1_CANVAS_ID);   
