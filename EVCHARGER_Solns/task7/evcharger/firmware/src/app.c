@@ -143,12 +143,13 @@ void APP_Tasks ( void )
             init_Scene2();
             if (appInitialized)
             {
-                gfxcShowCanvas(LAYER_0_CANVAS_ID);  
-                gfxcCanvasUpdate(LAYER_0_CANVAS_ID);
-                gfxcShowCanvas(LAYER_1_CANVAS_ID);  
+                
+                gfxcHideCanvas(LAYER_1_CANVAS_ID);  
                 gfxcCanvasUpdate(LAYER_1_CANVAS_ID);
                 gfxcHideCanvas(CABLE_ANIMATE_CANVAS_ID);  
                 gfxcCanvasUpdate(CABLE_ANIMATE_CANVAS_ID);
+                gfxcShowCanvas(LAYER_0_CANVAS_ID);  
+                gfxcCanvasUpdate(LAYER_0_CANVAS_ID);
 
                 appData.state = APP_STATE_SERVICE_TASKS;
             }

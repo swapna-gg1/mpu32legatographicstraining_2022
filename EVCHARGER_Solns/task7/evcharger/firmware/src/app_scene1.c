@@ -97,7 +97,6 @@ void ShowScene1(void)
         prev_percent_battery_charge = 0;
         calculate_meter_change();
         update_meterLabels(); 
-        Screen0_ButtonWidget1->fn->setVisible(Screen0_ButtonWidget1, LE_FALSE);
         Screen0_ButtonWidget1->fn->setEnabled(Screen0_ButtonWidget1, LE_FALSE);
         battery_image = 1;
     }
@@ -112,49 +111,22 @@ void ShowScene1(void)
         screensaver_cnt = 0;    
         Screen0_LabelWidget_scene0->fn->setString(Screen0_LabelWidget_scene0, (leString*)&string_Notice);
         Screen0_PanelWidget_0->fn->setPosition(Screen0_PanelWidget_0, 11, 11);
+        Screen0_ButtonWidget_scene1->fn->setVisible(Screen0_ButtonWidget_scene1, LE_TRUE);
+        Screen0_ButtonWidget1->fn->setVisible(Screen0_ButtonWidget1, LE_TRUE);
     }
-    Screen0_PanelWidget_0->fn->setVisible(Screen0_PanelWidget_0, LE_FALSE);
-    Screen0_RectangleWidget_0->fn->setVisible(Screen0_RectangleWidget_0, LE_FALSE);
-    Screen0_ImageWidget1->fn->setVisible(Screen0_ImageWidget1, LE_FALSE);
-    Screen0_LabelWidget_scene0->fn->setVisible(Screen0_LabelWidget_scene0, LE_FALSE);
+
     setScreen(DEMO_SCREEN1);
     animate_cable = true;        
  
-    Screen0_ImageWidget_2->fn->setVisible(Screen0_ImageWidget_2, LE_TRUE);
-    Screen0_ImageWidget_3->fn->setVisible(Screen0_ImageWidget_3, LE_TRUE);
-    Screen0_LabelWidget_0->fn->setVisible(Screen0_LabelWidget_0, LE_TRUE);
-    Screen0_LabelWidget_1->fn->setVisible(Screen0_LabelWidget_1, LE_TRUE);
-    Screen0_LabelWidget_2->fn->setVisible(Screen0_LabelWidget_2, LE_TRUE);
-    Screen0_LabelWidget_3->fn->setVisible(Screen0_LabelWidget_3, LE_TRUE);
-    Screen0_LabelWidget_4->fn->setVisible(Screen0_LabelWidget_4, LE_TRUE);
-    Screen0_LabelWidget_5->fn->setVisible(Screen0_LabelWidget_5, LE_TRUE);
-    Screen0_LabelWidget_6->fn->setVisible(Screen0_LabelWidget_6, LE_TRUE);
-    Screen0_LabelWidget_7->fn->setVisible(Screen0_LabelWidget_7, LE_TRUE);
-    Screen0_LabelWidget_8->fn->setVisible(Screen0_LabelWidget_8, LE_TRUE);
-    Screen0_LabelWidget_9->fn->setVisible(Screen0_LabelWidget_9, LE_TRUE);
-    Screen0_LabelWidget_10->fn->setVisible(Screen0_LabelWidget_10, LE_TRUE);
-    Screen0_LabelWidget_11->fn->setVisible(Screen0_LabelWidget_11, LE_TRUE);
-    Screen0_LabelWidget_12->fn->setVisible(Screen0_LabelWidget_12, LE_TRUE);
-    Screen0_LabelWidget_13->fn->setVisible(Screen0_LabelWidget_13, LE_TRUE);
-    Screen0_RectangleWidget_1->fn->setVisible(Screen0_RectangleWidget_1, LE_TRUE);
-    Screen0_RectangleWidget_2->fn->setVisible(Screen0_RectangleWidget_2, LE_TRUE);
-    Screen0_RectangleWidget_3->fn->setVisible(Screen0_RectangleWidget_3, LE_TRUE);
-    Screen0_RectangleWidget_4->fn->setVisible(Screen0_RectangleWidget_4, LE_TRUE);
-    Screen0_RectangleWidget_5->fn->setVisible(Screen0_RectangleWidget_5, LE_TRUE);
-    Screen0_ButtonWidget_plus->fn->setEnabled(Screen0_ButtonWidget_plus, LE_TRUE);
-    Screen0_ButtonWidget_plus->fn->setVisible(Screen0_ButtonWidget_plus, LE_TRUE);
-    Screen0_ButtonWidget_minus->fn->setEnabled(Screen0_ButtonWidget_minus, LE_TRUE);
-    Screen0_ButtonWidget_minus->fn->setVisible(Screen0_ButtonWidget_minus, LE_TRUE);
-    Screen0_ButtonWidget_scene1->fn->setEnabled(Screen0_ButtonWidget_scene1, LE_TRUE);
-    Screen0_ButtonWidget_scene1->fn->setVisible(Screen0_ButtonWidget_scene1, LE_TRUE);
-    Screen0_rtc_label->fn->setVisible(Screen0_rtc_label, LE_TRUE);
+
     Screen0_ImageSequenceWidget_0->fn->showImage(Screen0_ImageSequenceWidget_0,battery_image);
-    Screen0_ImageSequenceWidget_0->fn->setVisible(Screen0_ImageSequenceWidget_0, LE_TRUE);
-    
+    Screen0_ButtonWidget_scene1->fn->setEnabled(Screen0_ButtonWidget_scene1, LE_TRUE);
+    Screen0_ButtonWidget_plus->fn->setEnabled(Screen0_ButtonWidget_plus, LE_TRUE);
+    Screen0_ButtonWidget_minus->fn->setEnabled(Screen0_ButtonWidget_minus, LE_TRUE);
     TC0_CH1_TimerStart(); // for showing screen saver screen (Scene2))
     TC0_CH2_TimerStart(); // for cable animation
     
-    gfxcShowCanvas(LAYER_0_CANVAS_ID);  
+    gfxcHideCanvas(LAYER_0_CANVAS_ID);  
     gfxcCanvasUpdate(LAYER_0_CANVAS_ID);
     gfxcShowCanvas(LAYER_1_CANVAS_ID);  
     gfxcCanvasUpdate(LAYER_1_CANVAS_ID);
@@ -293,9 +265,7 @@ void update_meterLabels(void)
     sprintf(p_remainingtimecharbuff,"%d",remaining_time); 
     p_remainingT.fn->setFromCStr(&p_remainingT, p_remainingtimecharbuff);  
     Screen0_LabelWidget_11->fn->setString(Screen0_LabelWidget_11, (leString*)&p_remainingT); 
-
-    gfxcShowCanvas(LAYER_1_CANVAS_ID);  
-    gfxcCanvasUpdate(LAYER_1_CANVAS_ID);   
+ 
 }
 
 
@@ -357,6 +327,7 @@ void exitScene1(void)
 {
     TC0_CH2_TimerStop();
     TC0_CH1_TimerStop(); 
+    screensaver_cnt = 0;
     scene1_FC = false;
     gfxcHideCanvas(CABLE_ANIMATE_CANVAS_ID);  
     gfxcCanvasUpdate(CABLE_ANIMATE_CANVAS_ID);

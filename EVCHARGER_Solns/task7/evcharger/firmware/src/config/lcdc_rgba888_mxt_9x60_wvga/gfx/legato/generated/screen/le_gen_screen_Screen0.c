@@ -77,12 +77,14 @@ leResult screenShow_Screen0(void)
     Screen0_BackgroundPanel = leWidget_New();
     Screen0_BackgroundPanel->fn->setPosition(Screen0_BackgroundPanel, 0, 0);
     Screen0_BackgroundPanel->fn->setSize(Screen0_BackgroundPanel, 800, 480);
+    Screen0_BackgroundPanel->fn->setEnabled(Screen0_BackgroundPanel, LE_FALSE);
     Screen0_BackgroundPanel->fn->setScheme(Screen0_BackgroundPanel, &BlackScheme);
     root0->fn->addChild(root0, (leWidget*)Screen0_BackgroundPanel);
 
     Screen0_ImageWidget1 = leImageWidget_New();
     Screen0_ImageWidget1->fn->setPosition(Screen0_ImageWidget1, 0, 75);
     Screen0_ImageWidget1->fn->setSize(Screen0_ImageWidget1, 800, 326);
+    Screen0_ImageWidget1->fn->setEnabled(Screen0_ImageWidget1, LE_FALSE);
     Screen0_ImageWidget1->fn->setBackgroundType(Screen0_ImageWidget1, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ImageWidget1->fn->setBorderType(Screen0_ImageWidget1, LE_WIDGET_BORDER_NONE);
     Screen0_ImageWidget1->fn->setImage(Screen0_ImageWidget1, (leImage*)&image0);
@@ -91,6 +93,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_0 = leRectangleWidget_New();
     Screen0_RectangleWidget_0->fn->setPosition(Screen0_RectangleWidget_0, 191, 200);
     Screen0_RectangleWidget_0->fn->setSize(Screen0_RectangleWidget_0, 447, 134);
+    Screen0_RectangleWidget_0->fn->setEnabled(Screen0_RectangleWidget_0, LE_FALSE);
     Screen0_RectangleWidget_0->fn->setScheme(Screen0_RectangleWidget_0, &translucentScheme);
     Screen0_RectangleWidget_0->fn->setBorderType(Screen0_RectangleWidget_0, LE_WIDGET_BORDER_NONE);
     Screen0_RectangleWidget_0->fn->setThickness(Screen0_RectangleWidget_0, 2);
@@ -99,6 +102,7 @@ leResult screenShow_Screen0(void)
     Screen0_LabelWidget_scene0 = leLabelWidget_New();
     Screen0_LabelWidget_scene0->fn->setPosition(Screen0_LabelWidget_scene0, 245, 200);
     Screen0_LabelWidget_scene0->fn->setSize(Screen0_LabelWidget_scene0, 366, 114);
+    Screen0_LabelWidget_scene0->fn->setEnabled(Screen0_LabelWidget_scene0, LE_FALSE);
     Screen0_LabelWidget_scene0->fn->setScheme(Screen0_LabelWidget_scene0, &WhiteScheme);
     Screen0_LabelWidget_scene0->fn->setBackgroundType(Screen0_LabelWidget_scene0, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_scene0->fn->setString(Screen0_LabelWidget_scene0, (leString*)&string_Notice);
@@ -116,6 +120,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_ImageWidget_batteryLevel = leImageWidget_New();
     Screen0_ImageWidget_batteryLevel->fn->setPosition(Screen0_ImageWidget_batteryLevel, 366, 322);
+    Screen0_ImageWidget_batteryLevel->fn->setEnabled(Screen0_ImageWidget_batteryLevel, LE_FALSE);
     Screen0_ImageWidget_batteryLevel->fn->setVisible(Screen0_ImageWidget_batteryLevel, LE_FALSE);
     Screen0_ImageWidget_batteryLevel->fn->setBackgroundType(Screen0_ImageWidget_batteryLevel, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ImageWidget_batteryLevel->fn->setBorderType(Screen0_ImageWidget_batteryLevel, LE_WIDGET_BORDER_NONE);
@@ -124,6 +129,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_percent = leLabelWidget_New();
     Screen0_LabelWidget_percent->fn->setPosition(Screen0_LabelWidget_percent, 494, 360);
+    Screen0_LabelWidget_percent->fn->setEnabled(Screen0_LabelWidget_percent, LE_FALSE);
     Screen0_LabelWidget_percent->fn->setScheme(Screen0_LabelWidget_percent, &WhiteScheme);
     Screen0_LabelWidget_percent->fn->setBackgroundType(Screen0_LabelWidget_percent, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_percent->fn->setString(Screen0_LabelWidget_percent, (leString*)&string_charge_percent);
@@ -132,6 +138,7 @@ leResult screenShow_Screen0(void)
     Screen0_PanelWidget_battery = leWidget_New();
     Screen0_PanelWidget_battery->fn->setPosition(Screen0_PanelWidget_battery, 379, 357);
     Screen0_PanelWidget_battery->fn->setSize(Screen0_PanelWidget_battery, 64, 30);
+    Screen0_PanelWidget_battery->fn->setEnabled(Screen0_PanelWidget_battery, LE_FALSE);
     Screen0_PanelWidget_battery->fn->setVisible(Screen0_PanelWidget_battery, LE_FALSE);
     Screen0_PanelWidget_battery->fn->setScheme(Screen0_PanelWidget_battery, &BlueScheme);
     root0->fn->addChild(root0, (leWidget*)Screen0_PanelWidget_battery);
@@ -139,6 +146,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_7 = leRectangleWidget_New();
     Screen0_RectangleWidget_7->fn->setPosition(Screen0_RectangleWidget_7, 271, 99);
     Screen0_RectangleWidget_7->fn->setSize(Screen0_RectangleWidget_7, 288, 72);
+    Screen0_RectangleWidget_7->fn->setEnabled(Screen0_RectangleWidget_7, LE_FALSE);
     Screen0_RectangleWidget_7->fn->setVisible(Screen0_RectangleWidget_7, LE_FALSE);
     Screen0_RectangleWidget_7->fn->setScheme(Screen0_RectangleWidget_7, &translucentScheme);
     Screen0_RectangleWidget_7->fn->setBorderType(Screen0_RectangleWidget_7, LE_WIDGET_BORDER_NONE);
@@ -148,6 +156,7 @@ leResult screenShow_Screen0(void)
     Screen0_LabelWidget_15 = leLabelWidget_New();
     Screen0_LabelWidget_15->fn->setPosition(Screen0_LabelWidget_15, 287, 100);
     Screen0_LabelWidget_15->fn->setSize(Screen0_LabelWidget_15, 262, 65);
+    Screen0_LabelWidget_15->fn->setEnabled(Screen0_LabelWidget_15, LE_FALSE);
     Screen0_LabelWidget_15->fn->setVisible(Screen0_LabelWidget_15, LE_FALSE);
     Screen0_LabelWidget_15->fn->setScheme(Screen0_LabelWidget_15, &WhiteScheme);
     Screen0_LabelWidget_15->fn->setBackgroundType(Screen0_LabelWidget_15, LE_WIDGET_BACKGROUND_NONE);
@@ -157,6 +166,7 @@ leResult screenShow_Screen0(void)
     Screen0_LabelWidget_rtime = leLabelWidget_New();
     Screen0_LabelWidget_rtime->fn->setPosition(Screen0_LabelWidget_rtime, 245, 278);
     Screen0_LabelWidget_rtime->fn->setSize(Screen0_LabelWidget_rtime, 192, 47);
+    Screen0_LabelWidget_rtime->fn->setEnabled(Screen0_LabelWidget_rtime, LE_FALSE);
     Screen0_LabelWidget_rtime->fn->setVisible(Screen0_LabelWidget_rtime, LE_FALSE);
     Screen0_LabelWidget_rtime->fn->setScheme(Screen0_LabelWidget_rtime, &WhiteScheme);
     Screen0_LabelWidget_rtime->fn->setBackgroundType(Screen0_LabelWidget_rtime, LE_WIDGET_BACKGROUND_NONE);
@@ -165,6 +175,7 @@ leResult screenShow_Screen0(void)
     Screen0_PanelWidget_0 = leWidget_New();
     Screen0_PanelWidget_0->fn->setPosition(Screen0_PanelWidget_0, 11, 11);
     Screen0_PanelWidget_0->fn->setSize(Screen0_PanelWidget_0, 152, 40);
+    Screen0_PanelWidget_0->fn->setEnabled(Screen0_PanelWidget_0, LE_FALSE);
     Screen0_PanelWidget_0->fn->setScheme(Screen0_PanelWidget_0, &BlackScheme);
     root0->fn->addChild(root0, (leWidget*)Screen0_PanelWidget_0);
 
@@ -191,7 +202,7 @@ leResult screenShow_Screen0(void)
     Screen0_ImageWidget_2 = leImageWidget_New();
     Screen0_ImageWidget_2->fn->setPosition(Screen0_ImageWidget_2, 0, 0);
     Screen0_ImageWidget_2->fn->setSize(Screen0_ImageWidget_2, 800, 480);
-    Screen0_ImageWidget_2->fn->setVisible(Screen0_ImageWidget_2, LE_FALSE);
+    Screen0_ImageWidget_2->fn->setEnabled(Screen0_ImageWidget_2, LE_FALSE);
     Screen0_ImageWidget_2->fn->setBackgroundType(Screen0_ImageWidget_2, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ImageWidget_2->fn->setBorderType(Screen0_ImageWidget_2, LE_WIDGET_BORDER_NONE);
     Screen0_ImageWidget_2->fn->setImage(Screen0_ImageWidget_2, (leImage*)&image1);
@@ -200,7 +211,7 @@ leResult screenShow_Screen0(void)
     Screen0_ImageWidget_3 = leImageWidget_New();
     Screen0_ImageWidget_3->fn->setPosition(Screen0_ImageWidget_3, 11, 11);
     Screen0_ImageWidget_3->fn->setSize(Screen0_ImageWidget_3, 152, 40);
-    Screen0_ImageWidget_3->fn->setVisible(Screen0_ImageWidget_3, LE_FALSE);
+    Screen0_ImageWidget_3->fn->setEnabled(Screen0_ImageWidget_3, LE_FALSE);
     Screen0_ImageWidget_3->fn->setScheme(Screen0_ImageWidget_3, &BlackScheme);
     Screen0_ImageWidget_3->fn->setBackgroundType(Screen0_ImageWidget_3, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ImageWidget_3->fn->setBorderType(Screen0_ImageWidget_3, LE_WIDGET_BORDER_NONE);
@@ -210,7 +221,7 @@ leResult screenShow_Screen0(void)
     Screen0_LabelWidget_0 = leLabelWidget_New();
     Screen0_LabelWidget_0->fn->setPosition(Screen0_LabelWidget_0, 194, 12);
     Screen0_LabelWidget_0->fn->setSize(Screen0_LabelWidget_0, 187, 38);
-    Screen0_LabelWidget_0->fn->setVisible(Screen0_LabelWidget_0, LE_FALSE);
+    Screen0_LabelWidget_0->fn->setEnabled(Screen0_LabelWidget_0, LE_FALSE);
     Screen0_LabelWidget_0->fn->setScheme(Screen0_LabelWidget_0, &WhiteScheme);
     Screen0_LabelWidget_0->fn->setBackgroundType(Screen0_LabelWidget_0, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_0->fn->setString(Screen0_LabelWidget_0, (leString*)&string_evcharger);
@@ -218,7 +229,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_1 = leLabelWidget_New();
     Screen0_LabelWidget_1->fn->setPosition(Screen0_LabelWidget_1, 68, 368);
-    Screen0_LabelWidget_1->fn->setVisible(Screen0_LabelWidget_1, LE_FALSE);
+    Screen0_LabelWidget_1->fn->setEnabled(Screen0_LabelWidget_1, LE_FALSE);
     Screen0_LabelWidget_1->fn->setScheme(Screen0_LabelWidget_1, &WhiteScheme);
     Screen0_LabelWidget_1->fn->setBackgroundType(Screen0_LabelWidget_1, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_1->fn->setString(Screen0_LabelWidget_1, (leString*)&string_op_label);
@@ -226,7 +237,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_2 = leLabelWidget_New();
     Screen0_LabelWidget_2->fn->setPosition(Screen0_LabelWidget_2, 178, 368);
-    Screen0_LabelWidget_2->fn->setVisible(Screen0_LabelWidget_2, LE_FALSE);
+    Screen0_LabelWidget_2->fn->setEnabled(Screen0_LabelWidget_2, LE_FALSE);
     Screen0_LabelWidget_2->fn->setScheme(Screen0_LabelWidget_2, &WhiteScheme);
     Screen0_LabelWidget_2->fn->setBackgroundType(Screen0_LabelWidget_2, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_2->fn->setString(Screen0_LabelWidget_2, (leString*)&string_ctime_label);
@@ -234,7 +245,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_3 = leLabelWidget_New();
     Screen0_LabelWidget_3->fn->setPosition(Screen0_LabelWidget_3, 275, 368);
-    Screen0_LabelWidget_3->fn->setVisible(Screen0_LabelWidget_3, LE_FALSE);
+    Screen0_LabelWidget_3->fn->setEnabled(Screen0_LabelWidget_3, LE_FALSE);
     Screen0_LabelWidget_3->fn->setScheme(Screen0_LabelWidget_3, &WhiteScheme);
     Screen0_LabelWidget_3->fn->setBackgroundType(Screen0_LabelWidget_3, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_3->fn->setString(Screen0_LabelWidget_3, (leString*)&string_denergy_label);
@@ -242,7 +253,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_4 = leLabelWidget_New();
     Screen0_LabelWidget_4->fn->setPosition(Screen0_LabelWidget_4, 390, 368);
-    Screen0_LabelWidget_4->fn->setVisible(Screen0_LabelWidget_4, LE_FALSE);
+    Screen0_LabelWidget_4->fn->setEnabled(Screen0_LabelWidget_4, LE_FALSE);
     Screen0_LabelWidget_4->fn->setScheme(Screen0_LabelWidget_4, &WhiteScheme);
     Screen0_LabelWidget_4->fn->setBackgroundType(Screen0_LabelWidget_4, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_4->fn->setString(Screen0_LabelWidget_4, (leString*)&string_time_label);
@@ -250,7 +261,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_5 = leLabelWidget_New();
     Screen0_LabelWidget_5->fn->setPosition(Screen0_LabelWidget_5, 75, 412);
-    Screen0_LabelWidget_5->fn->setVisible(Screen0_LabelWidget_5, LE_FALSE);
+    Screen0_LabelWidget_5->fn->setEnabled(Screen0_LabelWidget_5, LE_FALSE);
     Screen0_LabelWidget_5->fn->setScheme(Screen0_LabelWidget_5, &WhiteScheme);
     Screen0_LabelWidget_5->fn->setBackgroundType(Screen0_LabelWidget_5, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_5->fn->setString(Screen0_LabelWidget_5, (leString*)&string_pwr);
@@ -258,7 +269,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_6 = leLabelWidget_New();
     Screen0_LabelWidget_6->fn->setPosition(Screen0_LabelWidget_6, 75, 447);
-    Screen0_LabelWidget_6->fn->setVisible(Screen0_LabelWidget_6, LE_FALSE);
+    Screen0_LabelWidget_6->fn->setEnabled(Screen0_LabelWidget_6, LE_FALSE);
     Screen0_LabelWidget_6->fn->setScheme(Screen0_LabelWidget_6, &WhiteScheme);
     Screen0_LabelWidget_6->fn->setBackgroundType(Screen0_LabelWidget_6, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_6->fn->setString(Screen0_LabelWidget_6, (leString*)&string_pwr_unit);
@@ -266,7 +277,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_7 = leLabelWidget_New();
     Screen0_LabelWidget_7->fn->setPosition(Screen0_LabelWidget_7, 181, 412);
-    Screen0_LabelWidget_7->fn->setVisible(Screen0_LabelWidget_7, LE_FALSE);
+    Screen0_LabelWidget_7->fn->setEnabled(Screen0_LabelWidget_7, LE_FALSE);
     Screen0_LabelWidget_7->fn->setScheme(Screen0_LabelWidget_7, &WhiteScheme);
     Screen0_LabelWidget_7->fn->setBackgroundType(Screen0_LabelWidget_7, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_7->fn->setString(Screen0_LabelWidget_7, (leString*)&string_ctime);
@@ -274,7 +285,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_8 = leLabelWidget_New();
     Screen0_LabelWidget_8->fn->setPosition(Screen0_LabelWidget_8, 181, 447);
-    Screen0_LabelWidget_8->fn->setVisible(Screen0_LabelWidget_8, LE_FALSE);
+    Screen0_LabelWidget_8->fn->setEnabled(Screen0_LabelWidget_8, LE_FALSE);
     Screen0_LabelWidget_8->fn->setScheme(Screen0_LabelWidget_8, &WhiteScheme);
     Screen0_LabelWidget_8->fn->setBackgroundType(Screen0_LabelWidget_8, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_8->fn->setString(Screen0_LabelWidget_8, (leString*)&string_ctime_unit);
@@ -282,7 +293,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_9 = leLabelWidget_New();
     Screen0_LabelWidget_9->fn->setPosition(Screen0_LabelWidget_9, 275, 412);
-    Screen0_LabelWidget_9->fn->setVisible(Screen0_LabelWidget_9, LE_FALSE);
+    Screen0_LabelWidget_9->fn->setEnabled(Screen0_LabelWidget_9, LE_FALSE);
     Screen0_LabelWidget_9->fn->setScheme(Screen0_LabelWidget_9, &WhiteScheme);
     Screen0_LabelWidget_9->fn->setBackgroundType(Screen0_LabelWidget_9, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_9->fn->setString(Screen0_LabelWidget_9, (leString*)&string_energy);
@@ -290,7 +301,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_10 = leLabelWidget_New();
     Screen0_LabelWidget_10->fn->setPosition(Screen0_LabelWidget_10, 275, 447);
-    Screen0_LabelWidget_10->fn->setVisible(Screen0_LabelWidget_10, LE_FALSE);
+    Screen0_LabelWidget_10->fn->setEnabled(Screen0_LabelWidget_10, LE_FALSE);
     Screen0_LabelWidget_10->fn->setScheme(Screen0_LabelWidget_10, &WhiteScheme);
     Screen0_LabelWidget_10->fn->setBackgroundType(Screen0_LabelWidget_10, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_10->fn->setString(Screen0_LabelWidget_10, (leString*)&string_energy_unit);
@@ -298,7 +309,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_11 = leLabelWidget_New();
     Screen0_LabelWidget_11->fn->setPosition(Screen0_LabelWidget_11, 395, 412);
-    Screen0_LabelWidget_11->fn->setVisible(Screen0_LabelWidget_11, LE_FALSE);
+    Screen0_LabelWidget_11->fn->setEnabled(Screen0_LabelWidget_11, LE_FALSE);
     Screen0_LabelWidget_11->fn->setScheme(Screen0_LabelWidget_11, &WhiteScheme);
     Screen0_LabelWidget_11->fn->setBackgroundType(Screen0_LabelWidget_11, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_11->fn->setString(Screen0_LabelWidget_11, (leString*)&string_rtime);
@@ -306,7 +317,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_12 = leLabelWidget_New();
     Screen0_LabelWidget_12->fn->setPosition(Screen0_LabelWidget_12, 395, 447);
-    Screen0_LabelWidget_12->fn->setVisible(Screen0_LabelWidget_12, LE_FALSE);
+    Screen0_LabelWidget_12->fn->setEnabled(Screen0_LabelWidget_12, LE_FALSE);
     Screen0_LabelWidget_12->fn->setScheme(Screen0_LabelWidget_12, &WhiteScheme);
     Screen0_LabelWidget_12->fn->setBackgroundType(Screen0_LabelWidget_12, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_12->fn->setString(Screen0_LabelWidget_12, (leString*)&string_rtime_unit);
@@ -314,7 +325,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_LabelWidget_13 = leLabelWidget_New();
     Screen0_LabelWidget_13->fn->setPosition(Screen0_LabelWidget_13, 580, 364);
-    Screen0_LabelWidget_13->fn->setVisible(Screen0_LabelWidget_13, LE_FALSE);
+    Screen0_LabelWidget_13->fn->setEnabled(Screen0_LabelWidget_13, LE_FALSE);
     Screen0_LabelWidget_13->fn->setScheme(Screen0_LabelWidget_13, &WhiteScheme);
     Screen0_LabelWidget_13->fn->setBackgroundType(Screen0_LabelWidget_13, LE_WIDGET_BACKGROUND_NONE);
     Screen0_LabelWidget_13->fn->setString(Screen0_LabelWidget_13, (leString*)&string_remaining_charge);
@@ -323,7 +334,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_1 = leRectangleWidget_New();
     Screen0_RectangleWidget_1->fn->setPosition(Screen0_RectangleWidget_1, 55, 368);
     Screen0_RectangleWidget_1->fn->setSize(Screen0_RectangleWidget_1, 7, 100);
-    Screen0_RectangleWidget_1->fn->setVisible(Screen0_RectangleWidget_1, LE_FALSE);
+    Screen0_RectangleWidget_1->fn->setEnabled(Screen0_RectangleWidget_1, LE_FALSE);
     Screen0_RectangleWidget_1->fn->setBorderType(Screen0_RectangleWidget_1, LE_WIDGET_BORDER_NONE);
     Screen0_RectangleWidget_1->fn->setThickness(Screen0_RectangleWidget_1, 2);
     root1->fn->addChild(root1, (leWidget*)Screen0_RectangleWidget_1);
@@ -331,7 +342,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_2 = leRectangleWidget_New();
     Screen0_RectangleWidget_2->fn->setPosition(Screen0_RectangleWidget_2, 163, 368);
     Screen0_RectangleWidget_2->fn->setSize(Screen0_RectangleWidget_2, 7, 100);
-    Screen0_RectangleWidget_2->fn->setVisible(Screen0_RectangleWidget_2, LE_FALSE);
+    Screen0_RectangleWidget_2->fn->setEnabled(Screen0_RectangleWidget_2, LE_FALSE);
     Screen0_RectangleWidget_2->fn->setBorderType(Screen0_RectangleWidget_2, LE_WIDGET_BORDER_NONE);
     Screen0_RectangleWidget_2->fn->setThickness(Screen0_RectangleWidget_2, 2);
     root1->fn->addChild(root1, (leWidget*)Screen0_RectangleWidget_2);
@@ -339,7 +350,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_3 = leRectangleWidget_New();
     Screen0_RectangleWidget_3->fn->setPosition(Screen0_RectangleWidget_3, 260, 368);
     Screen0_RectangleWidget_3->fn->setSize(Screen0_RectangleWidget_3, 7, 100);
-    Screen0_RectangleWidget_3->fn->setVisible(Screen0_RectangleWidget_3, LE_FALSE);
+    Screen0_RectangleWidget_3->fn->setEnabled(Screen0_RectangleWidget_3, LE_FALSE);
     Screen0_RectangleWidget_3->fn->setBorderType(Screen0_RectangleWidget_3, LE_WIDGET_BORDER_NONE);
     Screen0_RectangleWidget_3->fn->setThickness(Screen0_RectangleWidget_3, 2);
     root1->fn->addChild(root1, (leWidget*)Screen0_RectangleWidget_3);
@@ -347,7 +358,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_4 = leRectangleWidget_New();
     Screen0_RectangleWidget_4->fn->setPosition(Screen0_RectangleWidget_4, 378, 368);
     Screen0_RectangleWidget_4->fn->setSize(Screen0_RectangleWidget_4, 7, 100);
-    Screen0_RectangleWidget_4->fn->setVisible(Screen0_RectangleWidget_4, LE_FALSE);
+    Screen0_RectangleWidget_4->fn->setEnabled(Screen0_RectangleWidget_4, LE_FALSE);
     Screen0_RectangleWidget_4->fn->setBorderType(Screen0_RectangleWidget_4, LE_WIDGET_BORDER_NONE);
     Screen0_RectangleWidget_4->fn->setThickness(Screen0_RectangleWidget_4, 2);
     root1->fn->addChild(root1, (leWidget*)Screen0_RectangleWidget_4);
@@ -355,7 +366,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_5 = leRectangleWidget_New();
     Screen0_RectangleWidget_5->fn->setPosition(Screen0_RectangleWidget_5, 492, 368);
     Screen0_RectangleWidget_5->fn->setSize(Screen0_RectangleWidget_5, 7, 100);
-    Screen0_RectangleWidget_5->fn->setVisible(Screen0_RectangleWidget_5, LE_FALSE);
+    Screen0_RectangleWidget_5->fn->setEnabled(Screen0_RectangleWidget_5, LE_FALSE);
     Screen0_RectangleWidget_5->fn->setBorderType(Screen0_RectangleWidget_5, LE_WIDGET_BORDER_NONE);
     Screen0_RectangleWidget_5->fn->setThickness(Screen0_RectangleWidget_5, 2);
     root1->fn->addChild(root1, (leWidget*)Screen0_RectangleWidget_5);
@@ -364,7 +375,6 @@ leResult screenShow_Screen0(void)
     Screen0_ButtonWidget_plus->fn->setPosition(Screen0_ButtonWidget_plus, 690, 342);
     Screen0_ButtonWidget_plus->fn->setSize(Screen0_ButtonWidget_plus, 67, 61);
     Screen0_ButtonWidget_plus->fn->setEnabled(Screen0_ButtonWidget_plus, LE_FALSE);
-    Screen0_ButtonWidget_plus->fn->setVisible(Screen0_ButtonWidget_plus, LE_FALSE);
     Screen0_ButtonWidget_plus->fn->setBackgroundType(Screen0_ButtonWidget_plus, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ButtonWidget_plus->fn->setBorderType(Screen0_ButtonWidget_plus, LE_WIDGET_BORDER_NONE);
     Screen0_ButtonWidget_plus->fn->setPressedImage(Screen0_ButtonWidget_plus, (leImage*)&plusp);
@@ -376,7 +386,6 @@ leResult screenShow_Screen0(void)
     Screen0_ButtonWidget_minus->fn->setPosition(Screen0_ButtonWidget_minus, 690, 410);
     Screen0_ButtonWidget_minus->fn->setSize(Screen0_ButtonWidget_minus, 67, 69);
     Screen0_ButtonWidget_minus->fn->setEnabled(Screen0_ButtonWidget_minus, LE_FALSE);
-    Screen0_ButtonWidget_minus->fn->setVisible(Screen0_ButtonWidget_minus, LE_FALSE);
     Screen0_ButtonWidget_minus->fn->setBackgroundType(Screen0_ButtonWidget_minus, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ButtonWidget_minus->fn->setBorderType(Screen0_ButtonWidget_minus, LE_WIDGET_BORDER_NONE);
     Screen0_ButtonWidget_minus->fn->setPressedImage(Screen0_ButtonWidget_minus, (leImage*)&minusp);
@@ -387,7 +396,7 @@ leResult screenShow_Screen0(void)
     Screen0_rtc_label = leLabelWidget_New();
     Screen0_rtc_label->fn->setPosition(Screen0_rtc_label, 399, 19);
     Screen0_rtc_label->fn->setSize(Screen0_rtc_label, 165, 25);
-    Screen0_rtc_label->fn->setVisible(Screen0_rtc_label, LE_FALSE);
+    Screen0_rtc_label->fn->setEnabled(Screen0_rtc_label, LE_FALSE);
     Screen0_rtc_label->fn->setScheme(Screen0_rtc_label, &WhiteScheme);
     Screen0_rtc_label->fn->setBackgroundType(Screen0_rtc_label, LE_WIDGET_BACKGROUND_NONE);
     Screen0_rtc_label->fn->setString(Screen0_rtc_label, (leString*)&string_rtc);
@@ -395,7 +404,7 @@ leResult screenShow_Screen0(void)
 
     Screen0_ImageSequenceWidget_0 = leImageSequenceWidget_New();
     Screen0_ImageSequenceWidget_0->fn->setPosition(Screen0_ImageSequenceWidget_0, 558, 382);
-    Screen0_ImageSequenceWidget_0->fn->setVisible(Screen0_ImageSequenceWidget_0, LE_FALSE);
+    Screen0_ImageSequenceWidget_0->fn->setEnabled(Screen0_ImageSequenceWidget_0, LE_FALSE);
     Screen0_ImageSequenceWidget_0->fn->setBackgroundType(Screen0_ImageSequenceWidget_0, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ImageSequenceWidget_0->fn->setImageCount(Screen0_ImageSequenceWidget_0, 11);
     Screen0_ImageSequenceWidget_0->fn->setImage(Screen0_ImageSequenceWidget_0, 0, &Battery0);
@@ -425,6 +434,7 @@ leResult screenShow_Screen0(void)
     Screen0_RectangleWidget_6 = leRectangleWidget_New();
     Screen0_RectangleWidget_6->fn->setPosition(Screen0_RectangleWidget_6, 263, 153);
     Screen0_RectangleWidget_6->fn->setSize(Screen0_RectangleWidget_6, 361, 128);
+    Screen0_RectangleWidget_6->fn->setEnabled(Screen0_RectangleWidget_6, LE_FALSE);
     Screen0_RectangleWidget_6->fn->setVisible(Screen0_RectangleWidget_6, LE_FALSE);
     Screen0_RectangleWidget_6->fn->setScheme(Screen0_RectangleWidget_6, &translucentScheme);
     Screen0_RectangleWidget_6->fn->setBorderType(Screen0_RectangleWidget_6, LE_WIDGET_BORDER_NONE);
@@ -434,6 +444,7 @@ leResult screenShow_Screen0(void)
     Screen0_LabelWidget_14 = leLabelWidget_New();
     Screen0_LabelWidget_14->fn->setPosition(Screen0_LabelWidget_14, 310, 164);
     Screen0_LabelWidget_14->fn->setSize(Screen0_LabelWidget_14, 284, 101);
+    Screen0_LabelWidget_14->fn->setEnabled(Screen0_LabelWidget_14, LE_FALSE);
     Screen0_LabelWidget_14->fn->setVisible(Screen0_LabelWidget_14, LE_FALSE);
     Screen0_LabelWidget_14->fn->setScheme(Screen0_LabelWidget_14, &WhiteScheme);
     Screen0_LabelWidget_14->fn->setBackgroundType(Screen0_LabelWidget_14, LE_WIDGET_BACKGROUND_NONE);
@@ -444,7 +455,6 @@ leResult screenShow_Screen0(void)
     Screen0_ButtonWidget_scene1->fn->setPosition(Screen0_ButtonWidget_scene1, 717, 7);
     Screen0_ButtonWidget_scene1->fn->setSize(Screen0_ButtonWidget_scene1, 75, 75);
     Screen0_ButtonWidget_scene1->fn->setEnabled(Screen0_ButtonWidget_scene1, LE_FALSE);
-    Screen0_ButtonWidget_scene1->fn->setVisible(Screen0_ButtonWidget_scene1, LE_FALSE);
     Screen0_ButtonWidget_scene1->fn->setBackgroundType(Screen0_ButtonWidget_scene1, LE_WIDGET_BACKGROUND_NONE);
     Screen0_ButtonWidget_scene1->fn->setBorderType(Screen0_ButtonWidget_scene1, LE_WIDGET_BORDER_NONE);
     Screen0_ButtonWidget_scene1->fn->setPressedImage(Screen0_ButtonWidget_scene1, (leImage*)&round_power_off);
